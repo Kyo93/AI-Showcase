@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Agent Playbook - Sharing Session</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/plugin/highlight/monokai.min.css">
+    <link rel="stylesheet" href="style.css?v=1.0.8">
+</head>
+<body>
+    <canvas id="particles-canvas"></canvas>
+    <div id="ai-ambient-layer" aria-hidden="true"></div>
+    <div id="cursor-spotlight" aria-hidden="true"></div>
+    <div id="deck-vignette" aria-hidden="true"></div>
+    <div class="deck-header-chrome" aria-hidden="true">
+        <img src="assets/brand/sea-logo-footer.png" alt="Sea" class="header-logo">
+        <span class="header-title">AI AGENT PLAYBOOK</span>
+    </div>
+
+    <div class="reveal">
+        <div class="slides">
+
+            <!-- SLIDE 1: Title -->
+            <section data-background-color="#03004F" data-background-transition="zoom" class="hero-slide tech-title-slide">
+                <div class="tech-cover">
+                    <header class="tech-cover-header">
+                        <div class="tech-cover-brand">AI_AGENT_PLAYBOOK_v1.0</div>
+                        <div class="tech-cover-nav">
+                            <span>AGENT_PROMPT</span>
+                            <span>WORKFLOW</span>
+                            <span>GUARDRAILS</span>
+                        </div>
+                    </header>
+
+                    <div class="tech-cover-main">
+                        <div class="tech-cover-copy">
+                            <div class="tech-kicker">SEA TECH SHARING 2026</div>
+                            <h1 class="tech-title">
+                                <span>AI AGENT</span>
+                                <span>PLAYBOOK</span>
+                            </h1>
+                            <p class="tech-subtitle">Giao việc rõ. Kiểm chứng chắc. Demo thật.</p>
+                            <div class="tech-demo-pill">
+                                <i class="fa-solid fa-hard-drive"></i>
+                                <span>Ocean USB Builder</span>
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </div>
+
+                            <div class="tech-meta">
+                                <div>
+                                    <span>AUTHORS</span>
+                                    <strong>Sea Tech / Ops Team</strong>
+                                </div>
+                                <div>
+                                    <span>RELEASE</span>
+                                    <strong>May 2026</strong>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tech-cover-visual" aria-hidden="true">
+                            <div class="agent-loop-diagram">
+                                <div class="diagram-step">
+                                    <span class="step-num">01</span>
+                                    <strong class="step-title">Goal / Context</strong>
+                                    <span class="step-desc">Định nghĩa mục tiêu, giới hạn</span>
+                                </div>
+                                <div class="diagram-arrow"><i class="fa-solid fa-arrow-down"></i></div>
+                                <div class="diagram-step active">
+                                    <span class="step-num">02</span>
+                                    <strong class="step-title">Reason / Plan</strong>
+                                    <span class="step-desc">Đọc codebase & lập kế hoạch</span>
+                                </div>
+                                <div class="diagram-arrow"><i class="fa-solid fa-arrow-down"></i></div>
+                                <div class="diagram-step">
+                                    <span class="step-num">03</span>
+                                    <strong class="step-title">Execute</strong>
+                                    <span class="step-desc">Chạy tool & sửa đổi mã nguồn</span>
+                                </div>
+                                <div class="diagram-arrow"><i class="fa-solid fa-arrow-down"></i></div>
+                                <div class="diagram-step">
+                                    <span class="step-num">04</span>
+                                    <strong class="step-title">Verify</strong>
+                                    <span class="step-desc">Kiểm chứng chất lượng tự động</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <footer class="tech-cover-footer">
+                        <div>
+                            <span>INTERNAL BRIEFING</span>
+                            <span>SEA TECHNICAL PRESENTATION</span>
+                        </div>
+                        <div>
+                            <span>VERSION 1.0</span>
+                            <span>CONFIDENTIAL</span>
+                        </div>
+                    </footer>
+                </div>
+                <aside class="notes">
+                    <h3>Slide 1 - Mở đầu</h3>
+                    <p>Chào mọi người. Buổi hôm nay là AI Agent Playbook: một buổi chia sẻ thực dụng về cách giao việc cho AI Agent, cách kiểm chứng kết quả và cách đặt guardrails để dùng AI an toàn trong công việc thật.</p>
+                    <p>Phần cuối chỉ có một demo chính là Ocean USB Builder. Mình sẽ dùng demo đó để minh họa cách một workflow agentic có thể đi từ requirement rõ ràng tới một công cụ vận hành được.</p>
+                </aside>
+            </section>
+
+            <!-- SLIDE 2: Agenda -->
+            <section data-transition="convex">
+                <div class="slide-container">
+                    <h2 class="slide-title">Mục Lục Buổi Chia Sẻ</h2>
+                    <p class="slide-subtitle">Một mạch kể chuyện từ nhu cầu thật của team, sang bối cảnh agent, rồi tới cách làm và demo vận hành.</p>
+
+                    <div class="agenda-overview">
+                        <div class="glass-card agenda-item">
+                            <span class="agenda-index">01</span>
+                            <i class="fa-solid fa-chart-column neon-text-blue"></i>
+                            <div>
+                                <h3>Team cần gì từ AI?</h3>
+                                <p>Survey nội bộ cho thấy ưu tiên là workflow, prompt và demo thật.</p>
+                            </div>
+                        </div>
+                        <div class="glass-card agenda-item">
+                            <span class="agenda-index">02</span>
+                            <i class="fa-solid fa-satellite-dish neon-text-blue"></i>
+                            <div>
+                                <h3>Vì sao bây giờ là agent?</h3>
+                                <p>AI đang rời khỏi khung chat để vào workflow có tool-use và governance.</p>
+                            </div>
+                        </div>
+                        <div class="glass-card agenda-item">
+                            <span class="agenda-index">03</span>
+                            <i class="fa-solid fa-robot neon-text-purple"></i>
+                            <div>
+                                <h3>Chatbot khác AI Agent ở đâu?</h3>
+                                <p>Từ hỏi đáp sang lập kế hoạch, dùng tool và tự kiểm chứng.</p>
+                            </div>
+                        </div>
+                        <div class="glass-card agenda-item">
+                            <span class="agenda-index">04</span>
+                            <i class="fa-solid fa-terminal neon-text-green"></i>
+                            <div>
+                                <h3>Prompt, skill, workflow, guardrails</h3>
+                                <p>Cách giao việc, đóng gói SOP, chạy batch nhỏ và kiểm soát rủi ro.</p>
+                            </div>
+                        </div>
+                        <div class="glass-card agenda-item">
+                            <span class="agenda-index">05</span>
+                            <i class="fa-solid fa-hard-drive neon-text-orange"></i>
+                            <div>
+                                <h3>Demo Ocean USB Builder</h3>
+                                <p>Tool thật được build bằng Agentic Coding để tạo USB boot Windows.</p>
+                            </div>
+                        </div>
+                        <div class="glass-card agenda-item">
+                            <span class="agenda-index">06</span>
+                            <i class="fa-solid fa-hourglass-half neon-text-orange"></i>
+                            <div>
+                                <h3>AI Work Paradox và Q&A</h3>
+                                <p>Sau demo, chốt lại: nhanh hơn không thay thế phán đoán và điểm dừng.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="agenda-footer glass-card">
+                        <i class="fa-solid fa-bullseye neon-text-green"></i>
+                        <span>Sau buổi này, mục tiêu là mỗi người chọn được ít nhất một task lặp lại có thể giao cho AI Agent một cách an toàn.</span>
+                    </div>
+                </div>
+                <aside class="notes">
+                    <h3>Slide 2 - Mục lục</h3>
+                    <p>Trước khi vào nội dung, mình muốn đưa mọi người một bản đồ rất ngắn của buổi hôm nay.</p>
+                    <p>Chúng ta sẽ đi qua sáu phần: nhu cầu thật của team, bối cảnh AI đang chuyển sang agent, sự khác nhau giữa Chatbot và AI Agent, prompt-skill-workflow-guardrails, demo Ocean USB Builder, rồi chốt bằng AI Work Paradox và Q&amp;A.</p>
+                    <p>Mục tiêu không phải là mọi người nhớ hết tất cả công cụ. Mục tiêu là ra khỏi buổi này, mỗi người có thể chọn một task lặp lại trong công việc của mình và biết cách giao cho AI Agent một cách rõ ràng, an toàn, có kiểm chứng.</p>
+                </aside>
+            </section>
+
+            <!-- SLIDE 3: Team Needs -->
+            <section class="team-needs-slide" data-transition="convex">
+                <div class="slide-container">
+                    <h2 class="slide-title">Team Cần Gì Từ AI?</h2>
+                    <p class="slide-subtitle">13 phản hồi từ 07-18/05/2026: 36 lượt chọn chủ đề, 12/13 muốn demo hoặc case thực tế.</p>
+
+                    <div class="needs-command-grid">
+                        <div class="needs-mandate glass-card fragment need-zoom" data-fragment-index="1">
+                            <div class="mandate-kicker"><i class="fa-solid fa-chart-pie"></i> Format mong muốn</div>
+                            <div class="survey-statline"><strong>13</strong><span>phản hồi</span></div>
+                            <div class="format-donut-wrap">
+                                <div class="format-donut" role="img" aria-label="7 chọn live demo, 5 chọn case study, 1 chọn hỏi đáp">
+                                    <div class="format-donut-center"><strong>12/13</strong><span>demo/case</span></div>
+                                </div>
+                            </div>
+                            <div class="format-legend">
+                                <span><i class="legend-dot live-demo"></i>7 live demo</span>
+                                <span><i class="legend-dot case-study"></i>5 case study</span>
+                                <span><i class="legend-dot qna-format"></i>1 Q&amp;A</span>
+                            </div>
+                            <div class="mandate-percent">92.3% cần thấy output thật</div>
+                        </div>
+
+                        <div class="needs-topics glass-card fragment need-slide-up" data-fragment-index="2">
+                            <div class="needs-panel-heading">
+                                <span><i class="fa-solid fa-ranking-star"></i> Chủ đề ưu tiên</span>
+                                <em>36 lượt chọn</em>
+                            </div>
+                            <div class="topic-bar-list">
+                                <div class="topic-bar-item" style="--score: 100%; --delay: 0ms;">
+                                    <div class="topic-row-head"><span>01</span><strong>Tự động hóa &amp; Workflow</strong><em>12/13</em></div>
+                                    <div class="topic-track"><b></b></div>
+                                </div>
+                                <div class="topic-bar-item" style="--score: 92%; --delay: 100ms;">
+                                    <div class="topic-row-head"><span>02</span><strong>Kỹ thuật Prompt nâng cao</strong><em>11/13</em></div>
+                                    <div class="topic-track"><b></b></div>
+                                </div>
+                                <div class="topic-bar-item" style="--score: 50%; --delay: 200ms;">
+                                    <div class="topic-row-head"><span>03</span><strong>AI trong Coding</strong><em>6/13</em></div>
+                                    <div class="topic-track"><b></b></div>
+                                </div>
+                                <div class="topic-bar-item" style="--score: 42%; --delay: 300ms;">
+                                    <div class="topic-row-head"><span>04</span><strong>Tư duy sản phẩm AI</strong><em>5/13</em></div>
+                                    <div class="topic-track"><b></b></div>
+                                </div>
+                                <div class="topic-bar-item" style="--score: 17%; --delay: 400ms;">
+                                    <div class="topic-row-head"><span>05</span><strong>AI cho Thiết kế &amp; UI/UX</strong><em>2/13</em></div>
+                                    <div class="topic-track"><b></b></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="needs-promises glass-card fragment need-slide-left" data-fragment-index="3">
+                            <div class="needs-panel-heading">
+                                <span><i class="fa-solid fa-route"></i> Buổi này trả lời</span>
+                                <em>Playbook</em>
+                            </div>
+                            <div class="promise-rail">
+                                <div class="promise-rail-item" style="--delay: 0ms;"><span>01</span><div><strong>AI đang đổi ở đâu?</strong><p>Từ chat trả lời sang agent đọc file, dùng tool, chạy task.</p></div></div>
+                                <div class="promise-rail-item" style="--delay: 90ms;"><span>02</span><div><strong>Giao việc cho AI thế nào?</strong><p>Nói rõ mục tiêu, bối cảnh, quyền được làm và tiêu chí xong.</p></div></div>
+                                <div class="promise-rail-item" style="--delay: 180ms;"><span>03</span><div><strong>Biết AI đã làm thật bằng gì?</strong><p>Có file/code/docs, log, hoặc phần thay đổi sẵn để review/commit.</p></div></div>
+                                <div class="promise-rail-item" style="--delay: 270ms;"><span>04</span><div><strong>Khi nào phải hỏi lại người?</strong><p>Trước dữ liệu thật, xóa file, deploy, format USB, gửi email/API.</p></div></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="demo-proof-strip glass-card fragment need-glow" data-fragment-index="4">
+                        <i class="fa-solid fa-screwdriver-wrench neon-text-green"></i>
+                        <span><strong>Survey dẫn tới demo:</strong> Ocean USB Builder minh họa cách biến brief rõ, workflow agentic và guardrails thành tool chạy được.</span>
+                    </div>
+                </div>
+                <aside class="notes">
+                    <h3>Slide 3 - Nhu cầu của team</h3>
+                    <p>Slide này là lý do mình không làm một buổi điểm tin AI chung chung. Khảo sát có 13 phản hồi từ ngày 07/05/2026 đến 18/05/2026. Click 1: format mong muốn nghiêng rất rõ về thực hành: 7 người chọn live demo, 5 người chọn case study, 1 người chọn hỏi đáp. Gộp lại là 12/13 người, tương đương 92.3%, muốn thấy demo hoặc case thực tế.</p>
+                    <p>Click 2: với câu hỏi chọn nhiều, có 36 lượt chọn chủ đề. Tự động hóa và workflow đứng đầu với 12/13, kỹ thuật prompt nâng cao đứng ngay sau với 11/13. Sau đó là AI trong coding 6/13, tư duy sản phẩm AI 5/13, và AI cho thiết kế UI/UX 2/13.</p>
+                    <p>Click 3: từ các câu trả lời mở, buổi này sẽ trả lời bốn câu hỏi dễ áp dụng: AI đang đổi ở đâu, giao việc cho AI thế nào, biết AI đã làm thật bằng chứng cứ nào, và khi nào phải hỏi lại người trước thao tác thật như dữ liệu thật, xóa file, deploy, format USB, gửi email hoặc gọi API thật. Click 4: vì vậy case thực tế là Ocean USB Builder, một tool thật để nối survey, playbook và guardrails.</p>
+                    <p>Trước khi vào cách làm, mình muốn zoom ra một bước: vì sao đúng thời điểm này AI lại chuyển mạnh từ chatbot sang agent?</p>
+                </aside>
+            </section>
+
+            <!-- SLIDE 4: AI Update -->
+            <section data-transition="convex">
+                <div class="slide-container">
+                    <h2 class="slide-title">AI Update 2026: Từ Chatbot Sang Agent</h2>
+                    <p class="slide-subtitle">Model không chỉ thông minh hơn. Chúng bắt đầu đọc file, dùng tool, chạy task dài và cần cơ chế kiểm soát.</p>
+
+                    <div class="ai-update-showcase">
+                        <div class="glass-card ai-shift-visual">
+                            <div class="visual-label">From response to action</div>
+                            <svg class="agent-connections" viewBox="0 0 390 430">
+                                <circle cx="241" cy="215" r="115" class="orbit-ring" />
+                                <line class="conn-line line-reason fragment" data-fragment-index="1" x1="179" y1="83" x2="241" y2="215" />
+                                <line class="conn-line line-code fragment" data-fragment-index="2" x1="333" y1="113" x2="241" y2="215" />
+                                <line class="conn-line line-tools fragment" data-fragment-index="3" x1="333" y1="320" x2="241" y2="215" />
+                                <line class="conn-line line-guard fragment" data-fragment-index="4" x1="179" y1="356" x2="241" y2="215" />
+                            </svg>
+                            <div class="chat-node">
+                                <i class="fa-regular fa-message"></i>
+                                <span>CHAT</span>
+                            </div>
+                            <div class="shift-arrow fragment ai-fly-in" data-fragment-index="1">
+                                <i class="fa-solid fa-arrow-right-long"></i>
+                            </div>
+                            <div class="agent-core fragment ai-zoom-in" data-fragment-index="1">
+                                <i class="fa-solid fa-robot"></i>
+                                <strong>AGENT</strong>
+                                <span>Plan + Tool + Verify</span>
+                            </div>
+                            <div class="agent-orbit orbit-model fragment ai-fly-in" data-fragment-index="1"><i class="fa-solid fa-brain"></i><span>Reason</span></div>
+                            <div class="agent-orbit orbit-code fragment ai-fly-in" data-fragment-index="2"><i class="fa-solid fa-code-branch"></i><span>Code</span></div>
+                            <div class="agent-orbit orbit-tools fragment ai-fly-in" data-fragment-index="3"><i class="fa-solid fa-plug-circle-bolt"></i><span>Tools</span></div>
+                            <div class="agent-orbit orbit-guard fragment ai-fly-in" data-fragment-index="4"><i class="fa-solid fa-shield-halved"></i><span>Guard</span></div>
+                        </div>
+
+                        <div class="update-story">
+                            <div class="glass-card trend-card story-card fragment ai-fly-in" data-fragment-index="1">
+                                <div class="story-index">01</div>
+                                <div class="trend-icon"><i class="fa-solid fa-brain"></i></div>
+                                <h3>Model dài hơi hơn</h3>
+                                <p>Code, research, data, documents, software operation.</p>
+                            </div>
+                            <div class="glass-card trend-card story-card fragment ai-fly-in" data-fragment-index="2">
+                                <div class="story-index">02</div>
+                                <div class="trend-icon"><i class="fa-solid fa-code-branch"></i></div>
+                                <h3>Agent làm end-to-end</h3>
+                                <p>Đọc repo -> lập plan -> sửa file -> chạy test -> review diff.</p>
+                            </div>
+                            <div class="glass-card trend-card story-card fragment ai-fly-in" data-fragment-index="3">
+                                <div class="story-index">03</div>
+                                <div class="trend-icon"><i class="fa-solid fa-plug-circle-bolt"></i></div>
+                                <h3>Tool ecosystem kết nối context</h3>
+                                <p>MCP, connector, skill đưa docs, repo, API vào workflow.</p>
+                            </div>
+                            <div class="glass-card trend-card story-card fragment ai-fly-in" data-fragment-index="4">
+                                <div class="story-index">04</div>
+                                <div class="trend-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                                <h3>Governance kiểm soát rủi ro</h3>
+                                <p>Access, approval gate, log, audit, sandbox.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="takeaway-strip glass-card fragment ai-fly-in" data-fragment-index="5">
+                        <i class="fa-solid fa-bullseye neon-text-orange"></i>
+                        <span>Câu hỏi mới không phải "AI trả lời gì?", mà là "Agent được phép làm gì và kiểm chứng ra sao?"</span>
+                    </div>
+
+                    <div class="source-strip glass-card fragment ai-fade-in-soft" data-fragment-index="5">
+                        <span>Sources: OpenAI GPT-5.5/Codex Apr 2026, Google MCP/Managed Agents Apr-May 2026, Microsoft Agent 365 Mar 2026, Anthropic Claude Code 2026</span>
+                    </div>
+                </div>
+                <aside class="notes">
+                    <h3>Slide 4 - AI update gần đây</h3>
+                    <p>Từ nhu cầu của team, mình zoom ra bối cảnh rộng hơn. Phần update này mình giữ ngắn vì mục tiêu không phải điểm tin. Câu đinh của slide là: AI đã rời khỏi khung chat và bắt đầu đi vào workflow thật.</p>
+                    <p><strong>Click 1:</strong> Model làm được việc dài hơi hơn: code, research, data, documents và software operation.</p>
+                    <p><strong>Click 2:</strong> Coding agent bắt đầu nhận task end-to-end: đọc repo, lập plan, sửa file, chạy test và review diff.</p>
+                    <p><strong>Click 3:</strong> Tool ecosystem đưa đúng context vào agent: MCP, connector, skill, docs, repo, API và business tools.</p>
+                    <p><strong>Click 4:</strong> Enterprise bắt đầu buộc phải có governance: quyền truy cập, approval gate, log, audit và sandbox.</p>
+                    <p><strong>Click 5:</strong> Chốt takeaway: câu hỏi mới không còn là AI trả lời gì, mà là Agent được phép làm gì và kiểm chứng ra sao. Từ đây mình quay lại khái niệm nền: chatbot khác agent ở đâu?</p>
+                </aside>
+            </section>
+
+            <!-- SLIDE 5: Chatbot to Agent -->
+            <section data-transition="convex" class="agent-bridge-slide">
+                <div class="slide-container">
+                    <h2 class="slide-title">Chatbot &rarr; AI Agent: Từ Trả Lời Sang Làm Task</h2>
+                    <p class="slide-subtitle">Khác biệt không nằm ở câu trả lời dài hơn, mà ở khả năng lập kế hoạch, dùng công cụ và tự kiểm chứng.</p>
+
+                    <div class="agent-comparison-table glass-card">
+                        <div class="table-header">
+                            <div class="header-col cell-feature" aria-hidden="true"></div>
+                            <div class="header-col cell-chatbot">Chatbot</div>
+                            <div class="header-col cell-agent highlighting">AI Agent</div>
+                        </div>
+                        <div class="table-row">
+                            <div class="row-col cell-feature">Cách hoạt động</div>
+                            <div class="row-col cell-chatbot">Trả lời từng prompt; người dùng kéo task qua từng bước.</div>
+                            <div class="row-col cell-agent highlighting">Nhận mục tiêu, lập plan, chia việc và tự chạy nhiều bước.</div>
+                        </div>
+                        <div class="table-row">
+                            <div class="row-col cell-feature">Context</div>
+                            <div class="row-col cell-chatbot">Dựa chủ yếu vào đoạn chat hiện tại.</div>
+                            <div class="row-col cell-agent highlighting">Đọc repo, file, docs, log, tool output và lịch sử task.</div>
+                        </div>
+                        <div class="table-row">
+                            <div class="row-col cell-feature">Tool use</div>
+                            <div class="row-col cell-chatbot">Gợi ý lệnh hoặc code để người dùng tự chạy.</div>
+                            <div class="row-col cell-agent highlighting">Dùng shell, editor, browser, API/connector theo quyền được cấp.</div>
+                        </div>
+                        <div class="table-row">
+                            <div class="row-col cell-feature">Kiểm soát</div>
+                            <div class="row-col cell-chatbot">Rủi ro thấp hơn vì ít hành động thật.</div>
+                            <div class="row-col cell-agent highlighting">Cần sandbox, approval, diff review, log và quyền rõ ràng.</div>
+                        </div>
+                    </div>
+
+                    <div class="agent-takeaway">
+                        <span>Takeaway</span>
+                        <strong>Agent = Goal + Context + Tools + Checkpoints + Definition of Done</strong>
+                    </div>
+
+                    <img class="sea-logo-mark" src="assets/brand/sea-logo-footer.png" alt="Sea">
+                </div>
+                <aside class="notes">
+                    <h3>Slide 5 - Chatbot sang AI Agent</h3>
+                    <p>Chatbot giống một người trả lời tốt. AI Agent giống một cộng sự có thể nhận mục tiêu, đọc tài liệu, dùng công cụ và đi qua nhiều bước để hoàn thành task.</p>
+                    <p>Ví dụ với Ocean USB Builder: chatbot có thể gợi ý lệnh tạo USB; agent có thể đọc repo, kiểm tra manifest, chạy build hoặc mock, review log, rồi dừng trước thao tác format USB nếu chưa có approval.</p>
+                    <p>Điểm mạnh của agent cũng là điểm cần cẩn thận: agent có thể tác động vào file, chạy lệnh, gọi API hoặc gửi output ra ngoài. Vì vậy cách dùng agent phải khác cách chat.</p>
+                    <p>Từ đây, chúng ta cần một framework prompt mới cho agent.</p>
+                </aside>
+            </section>
+
+            <!-- SLIDE 6: Prompt for Agent -->
+            <section data-transition="convex">
+                <div class="slide-container">
+                    <h2 class="slide-title">Prompt Cho Agent Khác Prompt Cho Chatbot</h2>
+                    <p class="slide-subtitle">Agent cần nhiệm vụ, quyền hạn, điểm hỏi lại và tiêu chí xong thật.</p>
+
+                    <div class="agent-prompt-grid">
+                        <div class="glass-card prompt-tile"><span>Goal</span><p>Kết quả cuối cùng là gì?</p></div>
+                        <div class="glass-card prompt-tile"><span>Context</span><p>Repo, file, business background, dữ liệu đầu vào.</p></div>
+                        <div class="glass-card prompt-tile"><span>Tools</span><p>Được dùng shell, browser, editor, API, calendar hay không?</p></div>
+                        <div class="glass-card prompt-tile"><span>Constraints</span><p>Không được làm gì, giới hạn bảo mật và scope.</p></div>
+                        <div class="glass-card prompt-tile"><span>Checkpoint</span><p>Khi nào phải hỏi lại người dùng?</p></div>
+                        <div class="glass-card prompt-tile"><span>Definition of Done</span><p>Thế nào là xong: test, diff, docs, link, screenshot?</p></div>
+                    </div>
+
+                    <div class="glass-card prompt-example">
+                        <h3><i class="fa-solid fa-wand-magic-sparkles"></i> Agent brief mẫu</h3>
+                        <p>"Đóng vai senior engineer. Đọc repo, lập plan trước khi sửa. Chỉ chỉnh file liên quan. Không chạy lệnh phá hủy. Sau mỗi batch, chạy verification và báo diff. Xong khi test pass, docs cập nhật và có handover ngắn."</p>
+                    </div>
+                </div>
+                <aside class="notes">
+                    <h3>Slide 6 - Prompt cho Agent</h3>
+                    <p>Prompt cho chatbot thường chỉ cần câu hỏi. Prompt cho agent phải giống một brief công việc.</p>
+                    <p>Mình dùng 6 phần: Goal, Context, Tools, Constraints, Checkpoint và Definition of Done.</p>
+                    <p>Điểm rất quan trọng là checkpoint và Definition of Done. Nếu không có hai phần này, agent có thể làm rất nhiều nhưng không chắc đúng việc. Với task thật, xong không phải là "AI trả lời rồi", mà là test pass, diff rõ, docs cập nhật, và mình biết output ở đâu.</p>
+                    <p>Nếu prompt là brief cho một task, thì skill là cách đóng gói quy trình cho những task lặp lại.</p>
+                </aside>
+            </section>
+
+            <!-- SLIDE 7: Skill Ecosystem -->
+            <section data-transition="convex">
+                <div class="slide-container">
+                    <h2 class="slide-title">Skill Ecosystem Map</h2>
+                    <p class="slide-subtitle">Skill giúp agent không chỉ thông minh, mà có kỷ luật làm việc lặp lại được.</p>
+
+                    <div class="skill-map">
+                        <div class="glass-card skill-card">
+                            <div class="skill-badge">Superpowers</div>
+                            <h3>Workflow discipline</h3>
+                            <p>Planning, TDD, debugging, verification, code review. Dùng khi task cần kỹ thuật chắc tay.</p>
+                            <strong>Nên dùng khi:</strong><span> sửa code, build feature, debug, review.</span>
+                        </div>
+                        <div class="glass-card skill-card">
+                            <div class="skill-badge">GSD</div>
+                            <h3>Execution momentum</h3>
+                            <p>Chia nhỏ việc, giữ nhịp triển khai, tránh bị kẹt ở phân tích quá lâu.</p>
+                            <strong>Nên dùng khi:</strong><span> cần đẩy task rõ ràng tới kết quả nhanh.</span>
+                        </div>
+                        <div class="glass-card skill-card">
+                            <div class="skill-badge">CodyMaster</div>
+                            <h3>CM workflow & handover</h3>
+                            <p>Brainstorm, planning, docs, quality gate, continuity, SOP và handover cho agent sau.</p>
+                            <strong>Nên dùng khi:</strong><span> task nhiều bước, cần docs, demo, tiêu chuẩn CM.</span>
+                        </div>
+                    </div>
+
+                    <div class="glass-card warning-strip">
+                        <i class="fa-solid fa-circle-info"></i>
+                        <span>Không phải việc nào cũng cần skill. Dùng skill cho quyết định lặp lại, không dùng skill để phình hệ thống vì một task dùng một lần.</span>
+                    </div>
+                </div>
+                <aside class="notes">
+                    <h3>Slide 7 - Skill ecosystem</h3>
+                    <p>Khi agent mạnh hơn, skill trở thành cách đóng gói kỷ luật làm việc. Nó giống SOP cho AI.</p>
+                    <p>Superpowers phù hợp cho engineering discipline: planning, TDD, debugging, verification. GSD phù hợp khi cần giữ nhịp thực thi và chia nhỏ task. CodyMaster phù hợp cho CM workflow, docs, quality gate và handover.</p>
+                    <p>Nhưng cũng có một ranh giới: không phải việc nào cũng cần skill. Nếu chỉ dùng một lần, có thể nó chỉ cần prompt. Skill nên dành cho quyết định hoặc workflow lặp lại.</p>
+                    <p>Tiếp theo là cách ghép prompt và skill thành một workflow coding thực chiến.</p>
+                </aside>
+            </section>
+
+            <!-- SLIDE 8: Agentic Coding Workflow -->
+            <section data-transition="convex">
+                <div class="slide-container">
+                    <h2 class="slide-title">Agentic Coding Workflow</h2>
+                    <p class="slide-subtitle">Cách làm thực chiến để agent không chạy loạn: từng batch nhỏ, có verification và review.</p>
+
+                    <div class="agent-workflow">
+                        <div class="flow-step"><span>01</span><h3>Requirement rõ</h3><p>Việc gì, cho ai, output nào?</p></div>
+                        <div class="flow-step"><span>02</span><h3>Đọc codebase</h3><p>Agent scan structure, docs, entrypoints.</p></div>
+                        <div class="flow-step"><span>03</span><h3>Lập plan</h3><p>Không sửa file trước khi có hướng.</p></div>
+                        <div class="flow-step"><span>04</span><h3>Batch nhỏ</h3><p>Sửa từng nhóm file có liên quan.</p></div>
+                        <div class="flow-step"><span>05</span><h3>Verify</h3><p>Test, syntax, link, render, smoke check.</p></div>
+                        <div class="flow-step"><span>06</span><h3>Review diff</h3><p>Con người quyết định có nhận không.</p></div>
+                        <div class="flow-step"><span>07</span><h3>Handover</h3><p>Docs, status, next action.</p></div>
+                    </div>
+                </div>
+                <aside class="notes">
+                    <h3>Slide 8 - Agentic coding workflow</h3>
+                    <p>Đây là workflow mình khuyên dùng cho task coding với agent.</p>
+                    <p>Đầu tiên là requirement rõ. Sau đó agent phải đọc codebase, lập plan, rồi mới sửa. Khi sửa thì chia batch nhỏ, sau mỗi batch có verification. Cuối cùng con người review diff và agent cập nhật docs hoặc handover.</p>
+                    <p>Điểm khác biệt so với vibe coding ngẫu hứng là ở verification và review. Agent có thể chạy nhanh, nhưng không được tự quyết định mọi thứ là đúng.</p>
+                    <p>Khi workflow bắt đầu chạm file, terminal hoặc hệ thống thật, guardrail trở thành phần bắt buộc.</p>
+                </aside>
+            </section>
+
+            <!-- SLIDE 9: Guardrails -->
+            <section data-transition="convex">
+                <div class="slide-container">
+                    <h2 class="slide-title">Guardrails: Dùng AI Agent An Toàn</h2>
+                    <p class="slide-subtitle">Trong môi trường công ty, tốc độ chỉ có giá trị khi có kiểm soát.</p>
+
+                    <div class="guardrail-grid">
+                        <div class="glass-card guard-card">
+                            <i class="fa-solid fa-key"></i>
+                            <h3>Không paste secret</h3>
+                            <p>Token, password, webhook, private URL và enrollment payload không được đưa vào AI public.</p>
+                        </div>
+                        <div class="glass-card guard-card">
+                            <i class="fa-solid fa-database"></i>
+                            <h3>Mock data trước</h3>
+                            <p>Dùng dữ liệu giả lập trước. Real data chỉ dùng khi có approval và endpoint phù hợp.</p>
+                        </div>
+                        <div class="glass-card guard-card">
+                            <i class="fa-solid fa-hand"></i>
+                            <h3>Approval gate</h3>
+                            <p>Phải hỏi trước khi xóa file, format disk, deploy, push code, gửi email hoặc gọi API thật.</p>
+                        </div>
+                        <div class="glass-card guard-card">
+                            <i class="fa-solid fa-list-check"></i>
+                            <h3>Log và audit</h3>
+                            <p>Task có tác động thật cần log: ai yêu cầu, agent làm gì, verification ra sao.</p>
+                        </div>
+                    </div>
+
+                    <div class="glass-card approval-matrix">
+                        <strong>Rule of thumb:</strong>
+                        <span>Read-only thì agent có thể tự làm. Write/change thì cần review. Destructive/external action thì cần explicit approval.</span>
+                    </div>
+                </div>
+                <aside class="notes">
+                    <h3>Slide 9 - Guardrails</h3>
+                    <p>Trong công ty, guardrail không phải để làm chậm AI. Guardrail giúp AI được dùng vào việc thật mà không tạo rủi ro không kiểm soát.</p>
+                    <p>Bốn nguyên tắc: không paste secret, dùng mock data trước, có approval gate cho hành động có tác động thật, và có log/audit.</p>
+                    <p>Rule đơn giản là: read-only có thể tự động nhiều hơn. Write hoặc change cần review. Destructive hoặc external action cần explicit approval.</p>
+                    <p>Với guardrail đó, mình đi vào demo thật: Ocean USB Builder.</p>
+                </aside>
+            </section>
+
+            <!-- SLIDE 10: Ocean USB Builder Demo -->
+            <section data-transition="convex">
+                <div class="slide-container">
+                    <h2 class="slide-title">Live Demo: Ocean USB Builder</h2>
+                    <p class="slide-subtitle">Một tool thật được build bằng Agentic Coding: tạo USB boot Windows 11 Pro offline và stage apps/drivers.</p>
+
+                    <div class="grid-2col demo-layout-grid">
+                        <!-- Left Column: Tool Details & Safety SOP -->
+                        <div class="demo-info-panel">
+                            <div class="glass-card bullet-card" style="margin-bottom: 16px;">
+                                <h4><i class="fa-solid fa-location-dot"></i> Tool đang nằm ở đâu?</h4>
+                                <ul>
+                                    <li><strong>Repo:</strong> <code>C:\Users\Ocean\Documents\VibeCode\OSDCloud</code></li>
+                                    <li><strong>App:</strong> <code>dist\OceanUsbBuilder\OceanUsbBuilder.exe</code></li>
+                                    <li><strong>Engine:</strong> <code>tools\Invoke-OceanUsbBuild.ps1</code></li>
+                                </ul>
+                            </div>
+                            <div class="glass-card bullet-card">
+                                <h4><i class="fa-solid fa-shield-halved neon-text-orange"></i> Cách demo an toàn</h4>
+                                <ul>
+                                    <li>Walkthrough GUI, manifest, engine và docs trước.</li>
+                                    <li>Không format USB thật nếu chưa có test USB riêng.</li>
+                                    <li>Không show secret, password hoặc package URL nhạy cảm.</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Right Column: UI Mockup Window -->
+                        <div class="glass-card demo-mockup-card">
+                            <div class="mockup-header windows-header">
+                                <div class="mockup-win-left">
+                                    <i class="fa-solid fa-hard-drive mockup-win-icon"></i>
+                                    <span class="mockup-title">OceanUsbBuilder.exe</span>
+                                </div>
+                                <div class="mockup-win-controls">
+                                    <span class="win-control btn-min">&mdash;</span>
+                                    <span class="win-control btn-max">&#9633;</span>
+                                    <span class="win-control btn-close">&times;</span>
+                                </div>
+                            </div>
+                            <img src="assets/images/ocean_usb_builder_mockup.png" alt="Ocean USB Builder UI Mockup" class="mockup-img">
+                        </div>
+                    </div>
+                </div>
+                <aside class="notes">
+                    <h3>Slide 10 - Live demo Ocean USB Builder</h3>
+                    <p>Bây giờ mình đi vào demo chính của buổi hôm nay: Ocean USB Builder.</p>
+                    <p>Tool này nằm trong `C:\Users\Ocean\Documents\VibeCode\OSDCloud`. Nó tạo USB boot cài Windows 11 Pro offline, đồng thời stage sẵn app và driver cần thiết.</p>
+                    <p>Mình sẽ mở repo, chỉ ra WPF app, build engine và Apps.json. Nếu không có USB test riêng, mình chỉ walkthrough để tránh format nhầm thiết bị thật.</p>
+                </aside>
+            </section>
+
+            <!-- SLIDE 11: Ocean USB Builder Anatomy -->
+            <section data-transition="convex">
+                <div class="slide-container">
+                    <h2 class="slide-title">Anatomy: Tool Được Agentic Build Như Thế Nào?</h2>
+                    <p class="slide-subtitle">Demo này ghép đủ playbook: prompt rõ, skill workflow, batch nhỏ, verification và guardrail.</p>
+
+                    <div class="grid-2col">
+                        <div class="glass-card">
+                            <h3 class="box-title neon-text-blue"><i class="fa-solid fa-layer-group"></i> Các lớp chính</h3>
+                            <div class="workflow-visual">
+                                <div class="wf-step"><i class="fa-solid fa-window-maximize"></i><span><strong>WPF App:</strong> chọn ISO, USB, apps, drivers, admin account và timezone.</span></div>
+                                <div class="wf-step"><i class="fa-solid fa-terminal"></i><span><strong>PowerShell Engine:</strong> format USB, stage image, copy payload và patch boot flow.</span></div>
+                                <div class="wf-step"><i class="fa-solid fa-box-archive"></i><span><strong>WinPE/Cache:</strong> reuse WinPE Kit và Windows 11 Pro fast WIM.</span></div>
+                                <div class="wf-step"><i class="fa-solid fa-download"></i><span><strong>Post-install:</strong> cài Chrome, 7-Zip, Zoom, UniKey, LibreOffice, Workspace ONE.</span></div>
+                            </div>
+                        </div>
+                        <div class="glass-card">
+                            <h3 class="box-title neon-text-yellow"><i class="fa-solid fa-robot"></i> Agentic lesson</h3>
+                            <div class="ideas-container">
+                                <div class="idea-box"><h5><i class="fa-solid fa-diagram-project"></i> Tách hệ thống thành layer</h5><p>UI, engine, manifest, WinPE, docs và tests được chia module rõ.</p></div>
+                                <div class="idea-box"><h5><i class="fa-solid fa-shield-halved"></i> Guardrail đi cùng code</h5><p>Vì tool format USB thật, confirmation, admin check và disk validation là phần bắt buộc.</p></div>
+                                <div class="idea-box"><h5><i class="fa-solid fa-clipboard-check"></i> Handover là output</h5><p>Docs, SOP, runbook và quality checklist giúp người khác vận hành được.</p></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <aside class="notes">
+                    <h3>Slide 11 - Anatomy Ocean USB Builder</h3>
+                    <p>Điểm mình muốn mọi người thấy là tool này không chỉ là vài đoạn code rời rạc. Nó có UI, engine, manifest, WinPE flow, post-install flow, docs và tests.</p>
+                    <p>Đây là nơi toàn bộ playbook xuất hiện: prompt rõ, chia layer, dùng skill để giữ kỷ luật, sửa từng batch, verify và cập nhật handover.</p>
+                    <p>Với những tool chạm hệ thống thật, guardrail không phải phần phụ. Guardrail là một phần của sản phẩm.</p>
+                    <p>Sau khi thấy demo thật, câu hỏi còn lại là: AI làm mình nhàn hơn, hay làm mình phải phán đoán nhiều hơn?</p>
+                </aside>
+            </section>
+
+            <!-- SLIDE 12: AI Work Paradox -->
+            <section data-transition="convex">
+                <div class="slide-container">
+                    <h2 class="slide-title">AI Work Paradox: Nhanh Hơn Không Tự Động Nhàn Hơn</h2>
+                    <p class="slide-subtitle">Khi chi phí thực thi giảm, thứ khan hiếm mới là phán đoán và điểm dừng.</p>
+
+                    <div class="paradox-layout">
+                        <div class="glass-card paradox-quote">
+                            <span class="quote-mark">"</span>
+                            <h3>Khi 40 giờ thành 40 phút, ta thường không nghỉ sớm hơn.</h3>
+                            <p>Ta dùng phần thời gian còn lại để nghĩ ra ý tưởng tiếp theo và làm luôn trong đêm.</p>
+                            <span class="source-pill">Jevons paradox for creative energy</span>
+                        </div>
+                        <div class="glass-card judgment-board">
+                            <h3><i class="fa-solid fa-compass"></i> Năng lực mới: biết không làm</h3>
+                            <ul>
+                                <li>Không build mọi ý tưởng thành skill hoặc pipeline.</li>
+                                <li>Không tối ưu thêm khi output đã đủ dùng và có giá trị.</li>
+                                <li>Không trả lời vội khi câu hỏi chưa gắn với quyết định.</li>
+                                <li>Không để agent chạy 24/7 kéo mình chạy theo.</li>
+                            </ul>
+                            <div class="judgment-callout">Giá trị dịch chuyển từ "làm được" sang "biết việc gì đáng làm".</div>
+                        </div>
+                    </div>
+                </div>
+                <aside class="notes">
+                    <h3>Slide 12 - AI Work Paradox</h3>
+                    <p>AI giúp mình làm nhanh hơn, nhưng nhanh hơn không tự động đồng nghĩa với nhàn hơn.</p>
+                    <p>Khi chi phí biến một ý tưởng thành sản phẩm giảm mạnh, mình thường không dùng phần thời gian tiết kiệm để nghỉ. Mình dùng nó để làm thêm ý tưởng khác.</p>
+                    <p>Vì vậy năng lực mới trong thời AI là biết không làm: không build mọi thứ, không tối ưu vô hạn, không trả lời vội, và không để agent xóa mất điểm dừng tự nhiên của mình.</p>
+                    <p>Đây là lý do playbook cần cả prompt, skill, workflow, guardrails và một demo thật. AI Agent không thay con người quyết định việc gì đáng làm; nó chỉ làm phần thực thi nhanh hơn khi mình giao việc đúng.</p>
+                </aside>
+            </section>
+
+            <!-- SLIDE 13: Q&A -->
+            <section data-background-color="#0A0F1D" data-background-transition="zoom">
+                <div class="glass-card main-hero dark-hero qa-card">
+                    <div class="badge logo-badge"><i class="fa-regular fa-comments"></i> Thảo Luận & Giải Đáp</div>
+                    <h1 class="glow-text">THANK <span class="gradient-text">YOU!</span></h1>
+                    <p class="subtitle">AI Agent tốt nhất khi con người biết giao việc, kiểm soát và chọn đúng việc đáng làm</p>
+                    <div class="qa-highlight glass-card">
+                        <p><i class="fa-solid fa-quote-left"></i><em>Task nào trong team nên thử làm bằng AI Agent trước?</em></p>
+                        <p><i class="fa-solid fa-quote-left"></i><em>Guardrail nào là bắt buộc nếu agent được dùng trên hệ thống thật?</em></p>
+                    </div>
+                </div>
+                <aside class="notes">
+                    <h3>Slide 13 - Q&amp;A</h3>
+                    <p>Đó là toàn bộ Practical Agent Playbook hôm nay: bắt đầu từ nhu cầu của team, nhìn ra bối cảnh agent, học cách giao việc, kiểm soát, xem demo thật, rồi quay lại câu hỏi về phán đoán và điểm dừng.</p>
+                    <p>Bây giờ mình mở phần Q&amp;A. Mọi người có thể hỏi về prompt cho Agent, skill ecosystem, Agentic Coding Workflow, guardrail, hoặc demo Ocean USB Builder.</p>
+                </aside>
+            </section>
+
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/plugin/markdown/markdown.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/plugin/highlight/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/plugin/notes/notes.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

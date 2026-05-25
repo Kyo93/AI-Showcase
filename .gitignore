@@ -1,0 +1,19 @@
+# Dependency directories
+node_modules/
+
+# Local/Internal metadata
+.cm/
+.gemini/
+
+# Visual QA and temporary test artifacts
+qa-screenshots/
+scratch/*.png
+scratch/SeaLogo/
+test-results/
+
+# Log files
+*.log
+
+# System files
+.DS_Store
+Thumbs.db

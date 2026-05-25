@@ -1,0 +1,14 @@
+./README.md
+./analysis.md
+./architecture.md
+./data-flow.md
+./deployment.md
+./database.md
+./demo-catalog.md
+./sop/index.md
+./sop/run-slide-deck.md
+./sop/live-demo-ocean-usb-builder.md
+./api/index.md
+./api/tool-contracts.md
+./glossary.md
+./quality-checklist.md
