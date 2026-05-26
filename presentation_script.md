@@ -91,14 +91,35 @@ Tài liệu này là script nói theo từng slide. Khi trình chiếu, mở `ht
 
 ## Slide 7: Skill Ecosystem Map
 
-* **Nội dung trên slide:** Superpowers, GSD, CodyMaster và nguyên tắc dùng skill.
+* **Nội dung trên slide:** Minh họa GitHub/docs của Superpowers, GSD, CodyMaster và nguyên tắc dùng skill.
 * **Thời gian ước tính:** 4 phút.
 * **Kịch bản nói:**
-  > "Skill là cách biến kinh nghiệm làm việc thành quy trình có thể gọi lại. Thay vì mỗi lần đều prompt từ đầu, mình đóng gói cách làm thành skill: khi nào lập plan, khi nào TDD, khi nào review, khi nào QA, khi nào cập nhật tài liệu.
+  > "Ở phần này mình không lấy ví dụ từ máy local. Mình dùng ba minh họa tham chiếu từ GitHub hoặc docs công khai để mọi người thấy skill thực chất là cách đóng gói workflow.
   >
-  > Superpowers mạnh ở workflow discipline: planning, TDD, debugging, verification. GSD tập trung vào chia task, giữ momentum và kéo việc về trạng thái done. CodyMaster là lớp CM workflow: docs, planning, quality gate, handover và trạng thái dự án.
+  > Superpowers minh họa đường đi từ task sang spec, implementation và review. GSD minh họa catalog skill: phát hiện tech stack, đề xuất pack, cài bằng CLI, check và update. CodyMaster minh họa một lớp workflow lớn hơn: start, task list, quality gate, deploy hoặc handover.
   >
-  > Nhưng không nên build skill cho mọi thứ. Một skill chỉ đáng tồn tại khi nó giải quyết một quyết định hoặc workflow lặp lại. Nếu chỉ dùng một lần, nó nên là prompt. Tiếp theo là cách ghép prompt và skill thành một workflow coding thực chiến."
+  > Bài học không phải là dùng đúng ba bộ này, mà là cách nghĩ: khi một cách làm được lặp lại nhiều lần, hãy biến nó thành skill. Nếu chỉ dùng một lần, prompt rõ là đủ. Tiếp theo là cách ghép prompt và skill thành một workflow coding thực chiến."
+
+## Slide 7a: Superpowers Reference
+
+* **Nội dung trên slide:** Ảnh minh họa Superpowers từ GitHub README.
+* **Thời gian ước tính:** 45 giây.
+* **Kịch bản nói:**
+  > "Superpowers là ví dụ về skill như một methodology. Task không đi thẳng vào code; nó đi qua brainstorm, plan, execution, TDD, review và finish. Đây là hình ảnh để team nhớ: skill là kỷ luật workflow."
+
+## Slide 7b: GSD Reference
+
+* **Nội dung trên slide:** Ảnh minh họa GSD skill catalog từ docs.
+* **Thời gian ước tính:** 45 giây.
+* **Kịch bản nói:**
+  > "GSD cho thấy góc vận hành của skill: có catalog, có cách cài, check, update, có global skill và project skill. Nghĩa là skill không chỉ để chạy một lần, mà có vòng đời giống một tài sản kỹ thuật."
+
+## Slide 7c: CodyMaster Reference
+
+* **Nội dung trên slide:** Ảnh minh họa CodyMaster workflow từ README.
+* **Thời gian ước tính:** 45 giây.
+* **Kịch bản nói:**
+  > "CodyMaster là ví dụ lớp workflow lớn hơn: start, task list, gate, handover. Mình dùng nó để minh họa cách một bộ skill có thể điều phối nhiều bước, không chỉ thêm instruction vào prompt."
 
 ## Slide 8: Agentic Coding Workflow
 

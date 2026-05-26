@@ -22,6 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
         center: true,
         touch: true,
         keyboard: true,
+        navigationMode: 'linear',
         overview: true,
         
         transition: 'convex', // none/fade/slide/convex/concave/zoom

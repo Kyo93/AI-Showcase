@@ -50,7 +50,7 @@ http://localhost:8000
 | Slide 3 | Team needs survey appears. |
 | Slide 4 | AI update appears. |
 | Slide 6 | Prompt for Agent appears. |
-| Slide 7 | Skill ecosystem map appears. |
+| Slide 7 | Skill ecosystem map and three Skill reference subslides appear. |
 | Slide 8 | Agentic coding workflow appears. |
 | Slide 9 | Guardrails appear. |
 | Slide 10 | Ocean USB Builder demo appears. |

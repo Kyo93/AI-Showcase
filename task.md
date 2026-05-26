@@ -23,7 +23,7 @@ robots: "index, follow"
 | Bối cảnh | 4 | AI Update 2026: Từ Chatbot Sang Agent | AI đang rời khỏi khung chat để đi vào workflow thật, có tool-use và governance. |
 | Khái niệm nền | 5 | Chatbot -> AI Agent | Làm rõ khác biệt giữa hỏi đáp và agent làm task nhiều bước. |
 | Kỹ năng giao việc | 6 | Prompt Cho Agent | Dạy framework Goal, Context, Tools, Constraints, Checkpoint, Definition of Done. |
-| Skill ecosystem | 7 | Superpowers / GSD / CodyMaster | Giải thích skill như SOP cho AI, dùng khi workflow lặp lại. |
+| Skill ecosystem | 7 | Superpowers / GSD / CodyMaster + reference subslides | Giải thích skill như SOP cho AI, dùng khi workflow lặp lại. |
 | Workflow thực chiến | 8 | Agentic Coding Workflow | Đưa quy trình requirement -> read codebase -> plan -> verify -> handover. |
 | An toàn | 9 | Guardrails | Nhấn mạnh secret, data, approval gate, log, mock-first. |
 | Demo chính | 10 | Ocean USB Builder Demo | Show tool thật tạo USB boot Windows 11 Pro offline và stage apps/drivers. |
@@ -44,7 +44,7 @@ Phần demo duy nhất là Ocean USB Builder: một tool thật ở `C:\Users\Oc
 - [x] Read `cm-brainstorm-idea` and current project status.
 - [x] Convert current status into a presentation table of contents.
 - [x] Add a beginning agenda slide to the deck.
-- [x] Update `presentation_script.md` to match 13 slides.
+- [x] Update `presentation_script.md` to match 13 main slides plus 3 Skill reference subslides.
 - [x] Update docs/status files for the new slide order.
 - [x] Refresh deck visual system using AI/technology template references.
 - [x] Spot-check render screenshots for hero, agenda, workflow, demo, Q&A and dense content slides.
