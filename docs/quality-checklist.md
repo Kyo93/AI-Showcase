@@ -20,7 +20,7 @@ robots: "index, follow"
 | Navigate slides | Keyboard arrows and controls move across slides. | `script.js` |
 | Agenda slide | Slide 2 summarizes the full presentation flow. | `index.html` |
 | Playbook slides | Slide 3 through Slide 9 cover team needs, AI update, prompt, skill ecosystem, workflow and guardrails. | `index.html` |
-| Demo slides | Slide 10 and Slide 11 cover Ocean USB Builder. | `index.html` |
+| Demo slides | Slide 10 covers the build journey; Slide 11 covers screenshot/video proof. | `index.html` |
 | Paradox slide | Slide 12 covers the AI Work Paradox reflection. | `index.html` |
 | Q&A slide | Final slide is reachable. | `index.html` |
 | Speaker notes | Speaker view opens with notes for all slides. | `index.html` |
@@ -33,6 +33,8 @@ robots: "index, follow"
 | Repo ready | `C:\Users\Ocean\Documents\VibeCode\OSDCloud` opens locally. | [Ocean USB Builder SOP](./sop/live-demo-ocean-usb-builder.md) |
 | App ready | `dist\OceanUsbBuilder\OceanUsbBuilder.exe` exists. | [Ocean USB Builder SOP](./sop/live-demo-ocean-usb-builder.md) |
 | Manifest ready | `core\ocean-offline\Apps.json` opens and does not show private secrets. | [Tool Contracts](./api/tool-contracts.md) |
+| Screenshot proof ready | `assets/images/ocean-usb-builder-live-build.png` exists, or Slide 11 fallback is acceptable for rehearsal. | `index.html` |
+| USB install video ready | `assets/videos/ocean-usb-install-windows.mp4` exists, or Slide 11 fallback is acceptable until final media is added. | `index.html` |
 | Safety mode chosen | Presenter decides walkthrough vs real build before going live. | [Ocean USB Builder SOP](./sop/live-demo-ocean-usb-builder.md) |
 | Fallback path ready | Presenter can explain screenshots, docs or logs if app cannot run live. | [Demo Catalog](./demo-catalog.md) |
 

@@ -17,7 +17,7 @@ robots: "index, follow"
 
 The presentation repo is intentionally simple: the browser loads `index.html`, pulls external CDN assets, applies local styling from `style.css`, then runs `script.js` to initialize Reveal.js and the animated particle background.
 
-The operational demo is external to this repo. It lives at `C:\Users\Ocean\Documents\VibeCode\OSDCloud` and is shown as a walkthrough during Slides 11-12. The demo tool combines a WPF desktop app, a PowerShell build engine, WinPE/Windows image staging, app/driver manifests and deployment scripts.
+The operational demo is external to this repo. It lives at `C:\Users\Ocean\Documents\VibeCode\OSDCloud` and is introduced as a build journey on Slide 10, then shown as proof media on Slide 11. The demo tool combines a WPF desktop app, a PowerShell build engine, WinPE/Windows image staging, app/driver manifests and deployment scripts.
 
 ## Architecture Diagram
 
@@ -29,7 +29,7 @@ graph TB
     HTML --> CDN["CDN assets: Reveal.js, Font Awesome, fonts"]
     JS --> Reveal["Reveal.initialize"]
     JS --> Canvas["particles-canvas"]
-    HTML --> Slides["13 slide sections"]
+    HTML --> Slides["Cover + Slide 1-12 + Q&A"]
     Slides --> SpeakerScript["presentation_script.md"]
     Slides --> DemoRunbook["demo_instructions.md"]
     DemoRunbook --> OSD["External OSDCloud repo"]
@@ -43,7 +43,7 @@ Text fallback: the presenter browser loads the static deck. The demo runbook poi
 
 | Component | Description | Technology | Key Files |
 |-----------|-------------|------------|-----------|
-| Slide Deck | 13-slide presentation for AI Agent Playbook sharing | HTML + Reveal.js | `index.html` |
+| Slide Deck | Cover, numbered main flow, Skill reference subslides and Q&A for AI Agent Playbook sharing | HTML + Reveal.js | `index.html` |
 | Design System | Sea/Shopee colors, cards, layout components | CSS variables and classes | `style.css` |
 | Interaction Layer | Reveal setup and particle animation | JavaScript Canvas API | `script.js` |
 | Speaker Content | Slide-by-slide narration and Q&A | Markdown | `presentation_script.md` |
@@ -68,7 +68,7 @@ sequenceDiagram
     B->>S: Execute after DOMContentLoaded
     S->>R: Initialize presentation controls
     P->>R: Navigate slides and open speaker notes
-    P->>O: Walk through Ocean USB Builder during Slides 11-12
+    P->>O: Explain build journey on Slide 10 and show Ocean USB Builder proof media on Slide 11
 ```
 
 ## Architecture Decisions

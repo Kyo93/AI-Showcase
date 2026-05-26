@@ -52,7 +52,7 @@ http://localhost:8000
 | Particle background runs | Canvas animation does not block slide content. |
 | Agenda slide present | Slide 2 summarizes the presentation table of contents. |
 | Playbook slides present | Slide 3 through 9 cover team needs, AI update, prompting, skill ecosystem, workflow and guardrails. |
-| Demo slides present | Slide 10 and 11 cover Ocean USB Builder. |
+| Demo slides present | Slide 10 covers the build journey; Slide 11 covers screenshot/video proof. |
 | Reflection slide present | Slide 12 covers AI Work Paradox. |
 | Q&A slide present | Final slide can be reached. |
 

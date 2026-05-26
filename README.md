@@ -13,7 +13,7 @@ robots: "index, follow"
 > - **Demo duy nhất**: Ocean USB Builder tại `C:\Users\Ocean\Documents\VibeCode\OSDCloud`.
 > - **CM docs**: Bắt đầu tại [docs/README.md](./docs/README.md).
 
-Dự án này gồm bộ slide HTML/CSS/JS chạy bằng Reveal.js, kịch bản thuyết trình và hướng dẫn diễn một demo thật. Mạch chính là Practical AI Agent Playbook: mục lục đầu bài, nhu cầu thật của team, AI update gần đây, Chatbot -> Agent, prompt cho Agent, skill ecosystem, Agentic Coding Workflow, guardrails, Ocean USB Builder và AI Work Paradox.
+Dự án này gồm bộ slide HTML/CSS/JS chạy bằng Reveal.js, kịch bản thuyết trình và hướng dẫn diễn một demo thật. Mạch chính là Practical AI Agent Playbook: mục lục đầu bài, nhu cầu thật của team, AI update gần đây, Chatbot -> Agent, prompt cho Agent, skill ecosystem, Agentic Coding Workflow, guardrails, hành trình build Ocean USB Builder, demo thật và AI Work Paradox.
 
 ## Start Here
 
@@ -29,7 +29,7 @@ Dự án này gồm bộ slide HTML/CSS/JS chạy bằng Reveal.js, kịch bản
 
 | File | Role |
 |------|------|
-| `index.html` | Entry point của slide web, gồm 13 slide và CDN Reveal.js. |
+| `index.html` | Entry point của slide web, gồm cover, main flow, skill reference subslides, Q&A và CDN Reveal.js. |
 | `style.css` | Design system Sea/Shopee, layout slide và component styles. |
 | `script.js` | Khởi tạo Reveal.js và hiệu ứng particle background. |
 | `presentation_script.md` | Kịch bản nói chi tiết theo từng slide. |

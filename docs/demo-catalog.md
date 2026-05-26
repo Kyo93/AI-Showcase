@@ -40,13 +40,21 @@ Text fallback: the session contains one operational demo. It walks through a rea
 | Success Signal | Audience sees GUI, manifest, engine and safety guardrails without accidental USB formatting. |
 | SOP | [Live Demo Ocean USB Builder](./sop/live-demo-ocean-usb-builder.md) |
 
+## Media Proof Assets
+
+| Asset | Path | Purpose |
+|-------|------|---------|
+| Live build screenshot | `assets/images/ocean-usb-builder-live-build.png` | Shows Ocean USB Builder actively building USB media. |
+| USB install video | `assets/videos/ocean-usb-install-windows.mp4` | Shows the created USB booting/cài Windows. |
+| Optional video poster | `assets/images/ocean-usb-install-poster.png` | Static poster shown before the video plays. |
+
 ## Rehearsal Order
 
-1. Open the deck and verify slides 1, 2, 3, 6, 7, 8, 9, 11, 12 and 13.
+1. Open the deck and verify the cover, slides 1, 2, 3, 6, 7, 8, 9, 10, 11, 12 and final Q&A.
 2. Open speaker view with `S`.
 3. Rehearse the playbook arc: AI update, prompt, skill ecosystem, workflow and guardrails.
-4. Open the OSDCloud repo and rehearse the Ocean USB Builder walkthrough.
-5. Show `Apps.json`, build engine and docs, then return to Slide 13 for Q&A about prompt, Agentic Coding and guardrails.
+4. Rehearse the Ocean USB Builder screenshot/video proof sequence.
+5. Keep `Apps.json`, build engine and docs ready as backup, then return to Q&A about prompt, Agentic Coding and guardrails.
 
 :::warning
 Do not run a full USB build during the live session unless a disposable test USB is already selected and the presenter explicitly confirms formatting.

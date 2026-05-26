@@ -53,14 +53,14 @@ http://localhost:8000
 | Slide 7 | Skill ecosystem map and three Skill reference subslides appear. |
 | Slide 8 | Agentic coding workflow appears. |
 | Slide 9 | Guardrails appear. |
-| Slide 10 | Ocean USB Builder demo appears. |
-| Slide 11 | Ocean USB Builder anatomy appears. |
+| Slide 10 | Demo build journey appears. |
+| Slide 11 | Ocean USB Builder screenshot/video proof appears. |
 | Slide 12 | AI work paradox appears. |
-| Slide 13 | Q&A appears. |
+| Final | Q&A appears. |
 
 ### Step 3: Rehearse With Script
 
-Use `presentation_script.md` as speaker notes. Slide 2 gives the audience-facing agenda. Slide 10 starts the Ocean USB Builder demo, Slide 11 explains the tool anatomy and safe operating boundaries, and Slide 12 closes with the AI Work Paradox reflection.
+Use `presentation_script.md` as speaker notes. Slide 2 gives the audience-facing agenda. Slide 10 explains how the Ocean USB Builder demo was formed, Slide 11 shows screenshot/video proof, and Slide 12 closes with the AI Work Paradox reflection.
 
 ### Step 4: Open Speaker View
 
@@ -79,7 +79,7 @@ Keep `presentation_script.md` open on a second screen if possible. The slide dec
 ## Expected Results
 
 - The deck opens without layout breakage.
-- The presenter can navigate from Slide 1 to Slide 13.
+- The presenter can navigate from the cover to the final Q&A slide.
 - The Ocean USB Builder demo slides are reachable before the session starts.
 
 ## Troubleshooting

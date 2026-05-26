@@ -40,7 +40,7 @@ sequenceDiagram
     participant USB as Test USB
     participant WinPE as WinPE/Ocean Offline
 
-    P->>Deck: Present Slide 10-11
+    P->>Deck: Present Slide 10 build journey, then Slide 11 proof media
     P->>Repo: Open OSDCloud repo
     P->>App: Show OceanUsbBuilder.exe
     App->>Engine: Pass ISO, USB disk, apps, drivers, account and timezone
@@ -49,7 +49,7 @@ sequenceDiagram
     WinPE-->>P: Windows 11 Pro installed with apps/drivers
 ```
 
-Text fallback: the presenter explains the deck, opens the OSDCloud repo, shows the WPF app, then walks through how the app hands build inputs to a PowerShell engine that prepares the bootable USB and offline deployment payload.
+Text fallback: the presenter first explains how the demo was formed from pain point to architecture, then shows proof media: the WPF app building USB media and a video of the USB booting/cài Windows.
 
 ## Data Objects
 

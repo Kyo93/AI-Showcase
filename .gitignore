@@ -7,8 +7,7 @@ node_modules/
 
 # Visual QA and temporary test artifacts
 qa-screenshots/
-scratch/*.png
-scratch/SeaLogo/
+scratch/
 test-results/
 
 # Log files

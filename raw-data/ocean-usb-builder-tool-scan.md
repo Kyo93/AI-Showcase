@@ -63,5 +63,5 @@ The demo should show a real AI Agentic output, not a mock workflow. Ocean USB Bu
 
 | Slide | Message |
 |-------|---------|
-| Slide 10 | "This is the real tool: Ocean USB Builder creates a Windows 11 Pro offline USB with apps/drivers." |
-| Slide 11 | "AI Agentic helped manage layers: WPF GUI, PowerShell engine, WinPE/cache, post-install flow, validation scripts and guardrails." |
+| Slide 10 | "This is how the demo was formed: operational pain point -> goal/constraints -> stack -> architecture -> verification." |
+| Slide 11 | "This is the proof: Ocean USB Builder builds media, and the USB can boot/cài Windows in the video." |

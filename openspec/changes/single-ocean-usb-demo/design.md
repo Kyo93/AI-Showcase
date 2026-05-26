@@ -17,10 +17,10 @@ The documentation must stop describing the older automation concepts as active d
 
 ### Slide And Script
 
-- Keep the demo scope focused even though the deck now has 13 slides after adding a beginning agenda page.
+- Keep the demo scope focused even though the deck now has a dedicated build-journey page.
 - Make Slide 10-11 the only demo sequence in the current Practical Agent Playbook deck:
-  - Slide 10: what Ocean USB Builder does and where the repo/app are.
-  - Slide 11: architecture anatomy of the WPF app, PowerShell engine, WinPE kit/cache, post-install flow and safe guardrails.
+  - Slide 10: how the Ocean USB Builder demo formed from problem, goal, technology and architecture decisions.
+  - Slide 11: screenshot/video proof showing the app build and USB install output.
 - Update speaker notes and Q&A so the presenter does not accidentally promise superseded external automation demos.
 
 ### Raw Data
@@ -38,6 +38,6 @@ The documentation must stop describing the older automation concepts as active d
 ## Verification
 
 - Search for stale active-demo references to superseded demos.
-- Verify the deck still has 13 sections and 13 speaker notes.
+- Verify the deck still has notes for Cover, Slide 1-12, Q&A and Skill reference subslides.
 - Run `node --check script.js`.
 - Confirm `http://localhost:8000` responds if the local server is running.

@@ -11,9 +11,9 @@ robots: "index, follow"
 > - **Project**: AI Sharing Present.
 > - **Format**: Markdown chuẩn CM, tối ưu cho người đọc và AI agent.
 > - **Language**: Vietnamese.
-> - **Last Updated**: 2026-05-25.
+> - **Last Updated**: 2026-05-26.
 
-Bộ tài liệu này làm rõ slide deck, nội dung thuyết trình và demo duy nhất. Mạch slide hiện là Practical AI Agent Playbook: mục lục đầu bài, nhu cầu thật của team, AI update gần đây, Chatbot -> Agent, prompt cho Agent, skill ecosystem, Agentic Coding Workflow, guardrails, Ocean USB Builder và AI Work Paradox.
+Bộ tài liệu này làm rõ slide deck, nội dung thuyết trình và demo duy nhất. Mạch slide hiện là Practical AI Agent Playbook: mục lục đầu bài, nhu cầu thật của team, AI update gần đây, Chatbot -> Agent, prompt cho Agent, skill ecosystem, Agentic Coding Workflow, guardrails, hành trình build Ocean USB Builder, demo thật và AI Work Paradox.
 
 ## Technical Documentation
 
