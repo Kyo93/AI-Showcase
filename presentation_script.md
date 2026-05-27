@@ -53,12 +53,11 @@ Tài liệu này là script nói theo từng slide. Khi trình chiếu, mở `ht
   >
   > Click thứ hai: với câu hỏi chọn nhiều, có tổng cộng 36 lượt chọn chủ đề. Tự động hóa và workflow đứng đầu với 12/13, kỹ thuật prompt nâng cao đứng ngay sau với 11/13. Sau đó là AI trong coding 6/13, tư duy sản phẩm AI 5/13, và AI cho thiết kế UI/UX 2/13.
   >
-  > Click thứ ba: từ các câu trả lời mở, mình gom lại thành bốn câu hỏi dễ áp dụng. Một là AI đang đổi ở đâu: từ chat trả lời sang agent có thể đọc file, dùng tool và chạy task. Hai là giao việc cho AI thế nào: nói rõ mục tiêu, bối cảnh, quyền được làm và tiêu chí xong. Ba là biết AI đã làm thật bằng gì: phải có file, code, docs, log, hoặc phần thay đổi sẵn để review và commit. Bốn là khi nào phải hỏi lại người: trước dữ liệu thật, xóa file, deploy, format USB, gửi email hoặc gọi API thật.
+  > Click thứ ba: từ các câu hỏi và phản hồi mở, mình gom lại thành bốn chủ đề chính mà buổi chia sẻ này sẽ trả lời. Một là xu thế AI hiện nay, đi từ chatbot hội thoại sang agent tự chạy task. Hai là Agentic AI có thể làm gì: lập plan, dùng tool, đọc code. Ba là cách prompt hiệu quả: giao việc bằng brief có Goal, Context, Constraints, Checkpoint và DoD rõ ràng. Bốn là AI trong môi trường Enterprise, bao gồm dùng platform nội bộ và bảo đảm an toàn dữ liệu qua Guardrails.
   >
   > Click cuối: vì vậy case thực tế là Ocean USB Builder, một tool thật để nối survey, playbook và guardrails.
   >
   > Trước khi vào cách làm, mình muốn zoom ra một bước: vì sao đúng thời điểm này AI lại chuyển mạnh từ chatbot sang agent?"
-
 ## Slide 4: AI Trend update
 
 * **Nội dung trên slide:** AI đã rời khỏi khung chat và bắt đầu đi vào workflow thật.

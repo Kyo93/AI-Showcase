@@ -148,9 +148,7 @@ body[data-slide-index="17"] .deck-header-chrome {
     display: none;
 }
 
-body[data-slide-index="7"] .deck-header-chrome .header-logo {
-    visibility: hidden;
-}
+
 
 .reveal {
     z-index: 2;
@@ -164,7 +162,7 @@ body[data-slide-index="7"] .deck-header-chrome .header-logo {
 
 .reveal section {
     height: 100%;
-    padding: 26px 46px !important;
+    padding: 32px 46px 20px !important;
 }
 
 .slide-container {
@@ -173,7 +171,7 @@ body[data-slide-index="7"] .deck-header-chrome .header-logo {
     flex-direction: column;
     justify-content: center;
     width: 100%;
-    min-height: 650px;
+    min-height: 560px;
 }
 
 .slide-container::before {
@@ -209,7 +207,7 @@ body[data-slide-index="7"] .deck-header-chrome .header-logo {
 }
 
 .slide-title {
-    margin: 0 0 10px !important;
+    margin: 12px 0 10px !important;
     color: var(--sea-navy) !important;
     font-size: 38px !important;
     line-height: 1.1 !important;
@@ -2083,7 +2081,7 @@ body[data-slide-index="7"] .deck-header-chrome .header-logo {
 
 .agent-product-card {
     display: flex;
-    min-height: 354px;
+    min-height: 320px;
     flex-direction: column;
     justify-content: space-between;
     padding: 16px !important;
@@ -2226,7 +2224,7 @@ body[data-slide-index="7"] .deck-header-chrome .header-logo {
     gap: 14px;
     min-height: 58px;
     max-width: 1120px;
-    margin: 16px auto 0;
+    margin: 10px auto 0;
     padding: 14px 18px !important;
     border-left: 5px solid var(--shopee-orange) !important;
 }
@@ -2252,6 +2250,7 @@ body[data-slide-index="7"] .deck-header-chrome .header-logo {
 .internal-platforms-slide .slide-subtitle {
     font-size: 17px;
     line-height: 1.35;
+    margin-bottom: 12px !important;
 }
 
 .platform-brief-grid {
@@ -2259,16 +2258,16 @@ body[data-slide-index="7"] .deck-header-chrome .header-logo {
     grid-template-columns: minmax(0, 1.18fr) minmax(0, 0.82fr);
     gap: 13px;
     align-items: stretch;
-    margin-top: 14px;
+    margin-top: 8px;
 }
 
 .platform-card {
     --platform-accent: var(--sea-blue);
     --platform-wash: rgba(20, 146, 253, 0.08);
     display: flex;
-    min-height: 286px;
+    min-height: 220px;
     flex-direction: column;
-    padding: 14px !important;
+    padding: 10px 12px !important;
     overflow: hidden;
     border-top: 4px solid var(--platform-accent) !important;
 }
@@ -2288,7 +2287,7 @@ body[data-slide-index="7"] .deck-header-chrome .header-logo {
     align-items: flex-start;
     justify-content: space-between;
     gap: 14px;
-    margin-bottom: 10px;
+    margin-bottom: 6px;
 }
 
 .platform-kicker {
@@ -2326,9 +2325,9 @@ body[data-slide-index="7"] .deck-header-chrome .header-logo {
 }
 
 .platform-card p {
-    margin: 9px 0 0;
+    margin: 5px 0 0;
     color: var(--text) !important;
-    font-size: 12.4px;
+    font-size: 11.5px;
     line-height: 1.36;
     font-weight: 500;
     text-align: left;
@@ -2338,7 +2337,7 @@ body[data-slide-index="7"] .deck-header-chrome .header-logo {
 .smart-builder-mock {
     position: relative;
     flex: 1;
-    min-height: 188px;
+    min-height: 150px;
     border: 1px solid rgba(15, 23, 42, 0.08);
     border-radius: 8px;
     background: linear-gradient(135deg, rgba(255, 255, 255, 0.92), var(--platform-wash));
@@ -2349,7 +2348,7 @@ body[data-slide-index="7"] .deck-header-chrome .header-logo {
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 188px;
+    min-height: 150px;
     margin: 0;
     padding: 6px;
     background: #ffffff;
@@ -2359,7 +2358,7 @@ body[data-slide-index="7"] .deck-header-chrome .header-logo {
     display: block;
     width: 100%;
     height: 100%;
-    min-height: 172px;
+    min-height: 125px;
     object-fit: contain;
 }
 
@@ -2368,7 +2367,7 @@ body[data-slide-index="7"] .deck-header-chrome .header-logo {
     grid-template-columns: minmax(0, 1.25fr) minmax(150px, 0.75fr);
     gap: 10px;
     padding: 12px;
-    min-height: 174px;
+    min-height: 125px;
 }
 
 .smart-workspace {
@@ -2765,7 +2764,7 @@ body[data-slide-index="7"] .deck-header-chrome .header-logo {
 
 .superpowers-brief {
     width: min(1180px, 100%);
-    padding: 28px 32px 24px;
+    padding: 18px 24px 14px;
     border: 1px solid var(--line);
     border-top: 6px solid var(--sea-blue);
     border-radius: 10px;
@@ -2784,8 +2783,8 @@ body[data-slide-index="7"] .deck-header-chrome .header-logo {
 
 .cody-brief {
     border-top-color: var(--shopee-orange);
-    padding-top: 24px;
-    padding-bottom: 18px;
+    padding-top: 16px;
+    padding-bottom: 12px;
     background:
         linear-gradient(135deg, rgba(238, 77, 45, 0.10), rgba(255, 255, 255, 0.96) 36%),
         var(--surface);
