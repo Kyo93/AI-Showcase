@@ -71,6 +71,128 @@ document.addEventListener('DOMContentLoaded', () => {
         };
     }
 
+    function createVoicePilotControls() {
+        const manifestPath = 'assets/audio/voice-pilot/manifest.json';
+        const panel = document.createElement('div');
+        panel.className = 'voice-pilot-control';
+        panel.hidden = true;
+        panel.innerHTML = `
+            <button type="button" class="voice-pilot-button" aria-label="Play AI voice pilot">
+                <i class="fa-solid fa-volume-high" aria-hidden="true"></i>
+                <span class="voice-pilot-action">AI voice</span>
+            </button>
+            <span class="voice-pilot-label">synthetic clip</span>
+        `;
+        document.body.appendChild(panel);
+
+        const button = panel.querySelector('.voice-pilot-button');
+        const icon = panel.querySelector('i');
+        const action = panel.querySelector('.voice-pilot-action');
+        const label = panel.querySelector('.voice-pilot-label');
+        const audio = new Audio();
+        audio.preload = 'none';
+
+        let manifest = null;
+        let manifestLoaded = false;
+        let activeEntry = null;
+        let activeKey = '';
+
+        const setPlayingState = (isPlaying) => {
+            button.classList.toggle('is-playing', isPlaying);
+            icon.className = isPlaying ? 'fa-solid fa-pause' : 'fa-solid fa-volume-high';
+            action.textContent = isPlaying ? 'Pause' : 'AI voice';
+        };
+
+        const loadManifest = async () => {
+            if (manifestLoaded) return manifest;
+            manifestLoaded = true;
+
+            try {
+                const response = await fetch(manifestPath, { cache: 'no-store' });
+                if (!response.ok) return null;
+                manifest = await response.json();
+                return manifest;
+            } catch {
+                return null;
+            }
+        };
+
+        const stopAudio = () => {
+            audio.pause();
+            if (audio.src) {
+                audio.currentTime = 0;
+            }
+            setPlayingState(false);
+        };
+
+        const hideControl = () => {
+            activeEntry = null;
+            activeKey = '';
+            panel.hidden = true;
+            stopAudio();
+        };
+
+        button.addEventListener('click', async () => {
+            if (!activeEntry || !activeEntry.src) return;
+
+            const targetUrl = new URL(activeEntry.src, window.location.href).href;
+            if (audio.src === targetUrl && !audio.paused) {
+                audio.pause();
+                setPlayingState(false);
+                return;
+            }
+
+            if (audio.src !== targetUrl) {
+                audio.src = activeEntry.src;
+                audio.currentTime = 0;
+            }
+
+            try {
+                await audio.play();
+            } catch {
+                label.textContent = 'audio unavailable';
+                setPlayingState(false);
+            }
+        });
+
+        audio.addEventListener('playing', () => setPlayingState(true));
+        audio.addEventListener('pause', () => setPlayingState(false));
+        audio.addEventListener('ended', () => {
+            audio.currentTime = 0;
+            setPlayingState(false);
+        });
+
+        const handleSlide = async (event) => {
+            const section = event.currentSlide || (typeof Reveal !== 'undefined' ? Reveal.getCurrentSlide() : null);
+            const key = section?.dataset?.voiceKey || '';
+
+            if (!key) {
+                hideControl();
+                return;
+            }
+
+            stopAudio();
+            panel.hidden = true;
+            activeEntry = null;
+            activeKey = key;
+
+            const loadedManifest = await loadManifest();
+            const entry = loadedManifest?.slides?.[key];
+            const currentSlide = typeof Reveal !== 'undefined' ? Reveal.getCurrentSlide() : section;
+            if (!entry || entry.ready !== true || !entry.src || currentSlide?.dataset?.voiceKey !== key) {
+                return;
+            }
+
+            activeEntry = entry;
+            label.textContent = entry.label || 'synthetic clip';
+            panel.hidden = false;
+        };
+
+        return {
+            handleSlide
+        };
+    }
+
     function createCoverMotion() {
         if (prefersReducedMotion || typeof gsap === 'undefined') {
             return {
@@ -315,7 +437,7 @@ document.addEventListener('DOMContentLoaded', () => {
             loopTimelines = [];
             generatedNodes.forEach((node) => node.remove());
             generatedNodes = [];
-            gsap.set('.flow-step, .media-proof-frame, .proof-callout-list div', {
+            gsap.set('.flow-step, .media-proof-frame, .adam-avatar-head', {
                 clearProps: 'transform,opacity,visibility'
             });
         };
@@ -349,7 +471,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 '.guard-card',
                 '.approval-matrix',
                 '.media-proof-frame',
-                '.proof-callout-list > div',
                 '.paradox-quote',
                 '.judgment-board',
                 '.paradox-mechanisms > div',
@@ -487,6 +608,25 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         };
 
+        const animateNestedItems = (fragment, selector, vars = {}) => {
+            const items = toArray(selector, fragment);
+            if (!items.length) return;
+
+            gsap.fromTo(items, {
+                autoAlpha: 0,
+                y: vars.y ?? 10,
+                scale: vars.scale ?? 0.96
+            }, {
+                autoAlpha: 1,
+                y: 0,
+                scale: 1,
+                duration: vars.duration ?? 0.38,
+                ease: vars.ease || 'power3.out',
+                stagger: vars.stagger ?? 0.055,
+                clearProps: 'transform,opacity,visibility'
+            });
+        };
+
         const startWorkflowRunner = (section) => {
             const workflow = section.querySelector('.agent-workflow');
             const steps = workflow ? toArray('.flow-step', workflow) : [];
@@ -562,39 +702,60 @@ document.addEventListener('DOMContentLoaded', () => {
             loopTimelines.push(timeline);
         };
 
-        const loadDeferredVideo = (video) => {
-            if (!video || video.dataset.hydrated === 'true') return;
-            const source = video.querySelector('source[data-video-src]');
-            if (!source || !source.dataset.videoSrc) return;
-
-            source.setAttribute('src', source.dataset.videoSrc);
-            video.dataset.hydrated = 'true';
-            video.preload = 'metadata';
-            video.addEventListener('loadedmetadata', () => {
-                video.play().catch(() => {});
-            }, { once: true });
-            video.load();
+        const queueWorkflowRunner = (section) => {
+            if (!section) return;
+            const delayedStart = gsap.delayedCall(0.5, () => startWorkflowRunner(section));
+            loopTimelines.push(delayedStart);
         };
 
-        const armDeferredVideo = (section) => {
-            toArray('video source[data-video-src]', section).forEach((deferredSource) => {
-                const video = deferredSource.closest('video');
-                if (!video || video.dataset.armed === 'true') return;
-                const frame = video.closest('.media-proof-frame');
-                const trigger = frame?.querySelector('.video-placeholder') || frame || video;
-                if (!trigger) return;
+        const startAdamHeadWobble = (section) => {
+            const head = section.querySelector('.adam-avatar-head');
+            if (!head) return;
 
-                trigger.setAttribute('role', 'button');
-                trigger.setAttribute('tabindex', '0');
-                trigger.addEventListener('click', () => loadDeferredVideo(video));
-                trigger.addEventListener('keydown', (event) => {
-                    if (event.key === 'Enter' || event.key === ' ') {
-                        event.preventDefault();
-                        loadDeferredVideo(video);
-                    }
-                });
-                video.dataset.armed = 'true';
+            gsap.set(head, {
+                x: 0,
+                y: 0,
+                rotation: 0,
+                transformOrigin: '54% 39%',
+                force3D: true
             });
+
+            const timeline = gsap.timeline({
+                repeat: -1,
+                repeatDelay: 1.35,
+                defaults: {
+                    ease: 'sine.inOut'
+                }
+            });
+
+            timeline
+                .to(head, {
+                    rotation: 2.4,
+                    x: 0.8,
+                    y: -0.8,
+                    duration: 0.18
+                })
+                .to(head, {
+                    rotation: -1.9,
+                    x: -0.8,
+                    y: 0,
+                    duration: 0.22
+                })
+                .to(head, {
+                    rotation: 1.1,
+                    x: 0.4,
+                    y: -0.4,
+                    duration: 0.16
+                })
+                .to(head, {
+                    rotation: 0,
+                    x: 0,
+                    y: 0,
+                    duration: 0.38,
+                    ease: 'elastic.out(1, 0.42)'
+                });
+
+            loopTimelines.push(timeline);
         };
 
         const startProofScans = (section) => {
@@ -659,6 +820,11 @@ document.addEventListener('DOMContentLoaded', () => {
                         clearProps: 'transform'
                     });
                 }
+                if (fragment.classList.contains('platform-card')) {
+                    gsap.set(fragment.querySelectorAll('.alpha-ecosystem-figure img, .smart-toolbar span, .smart-panel span, .smart-preview, .smart-welcome'), {
+                        clearProps: 'transform,opacity,visibility'
+                    });
+                }
                 return;
             }
 
@@ -708,6 +874,31 @@ document.addEventListener('DOMContentLoaded', () => {
             if (fragment.classList.contains('needs-topics')) animateTopicBars(fragment);
             if (fragment.classList.contains('demo-proof-strip')) animateProofStrip(fragment);
             if (fragment.classList.contains('agent-decision-board')) animateDecisionBoard(fragment);
+            if (fragment.classList.contains('agent-build-loop')) {
+                animateNestedItems(fragment, '.builder-loop-steps span', { y: 8, stagger: 0.06 });
+            }
+            if (fragment.classList.contains('skill-visual-card')) {
+                animateNestedItems(fragment, '.mini-flow span', { y: 8, stagger: 0.05 });
+            }
+            if (fragment.classList.contains('superpowers-flowline')) {
+                animateNestedItems(fragment, 'span, i', { y: 6, scale: 0.98, stagger: 0.045 });
+            }
+            if (fragment.classList.contains('superpowers-steps')) {
+                animateNestedItems(fragment, ':scope > div', { y: 12, stagger: 0.045 });
+            }
+            if (fragment.classList.contains('prompt-tile')) {
+                animateNestedItems(fragment, 'span, p', { y: 7, stagger: 0.05 });
+            }
+            if (fragment.classList.contains('platform-card')) {
+                animateNestedItems(fragment, '.alpha-ecosystem-figure img', { y: 4, scale: 0.985, stagger: 0 });
+                animateNestedItems(fragment, '.smart-toolbar span, .smart-panel span, .smart-preview, .smart-welcome', { y: 8, stagger: 0.045 });
+            }
+            if (fragment.classList.contains('agent-workflow')) {
+                queueWorkflowRunner(fragment.closest('section'));
+            }
+            if (fragment.classList.contains('qa-highlight')) {
+                animateNestedItems(fragment, 'p', { y: 8, scale: 0.98, stagger: 0.08 });
+            }
         };
 
         const handleSlide = (event) => {
@@ -722,12 +913,16 @@ document.addEventListener('DOMContentLoaded', () => {
             slideTimeline = gsap.timeline();
             addStandardEntrance(slideTimeline, section);
 
-            if (section.querySelector('.agent-workflow')) {
+            const workflow = section.querySelector('.agent-workflow');
+            if (workflow && !workflow.classList.contains('fragment')) {
                 slideTimeline.add(() => startWorkflowRunner(section), 0.82);
             }
 
-            if (section.querySelector('.demo-proof-media-layout')) {
-                armDeferredVideo(section);
+            if (section.matches('.thanks-adam-slide')) {
+                slideTimeline.add(() => startAdamHeadWobble(section), 0.68);
+            }
+
+            if (section.querySelector('.proof-fullscreen-figure')) {
                 slideTimeline.add(() => startProofScans(section), 0.58);
             }
         };
@@ -740,6 +935,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const coverMotion = createCoverMotion();
     const deckMotion = createDeckMotion();
+    const voicePilotControls = createVoicePilotControls();
 
     if (typeof Reveal !== 'undefined') {
         Reveal.on('slidechanged', (event) => {
@@ -747,6 +943,7 @@ document.addEventListener('DOMContentLoaded', () => {
             syncParticleActivity(event.currentSlide);
             coverMotion.handleSlide(event);
             deckMotion.handleSlide(event);
+            voicePilotControls.handleSlide(event);
         });
 
         Reveal.on('ready', (event) => {
@@ -754,6 +951,7 @@ document.addEventListener('DOMContentLoaded', () => {
             syncParticleActivity(event.currentSlide);
             coverMotion.handleSlide(event);
             deckMotion.handleSlide(event);
+            voicePilotControls.handleSlide(event);
         });
 
         Reveal.on('fragmentshown', (event) => {

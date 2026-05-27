@@ -23,18 +23,22 @@ Tài liệu này là điểm đọc nhanh cho AI agent tiếp quản dự án.
 | Slide | Topic |
 |-------|-------|
 | Cover | AI Agent Playbook |
-| 1 | Mục Lục Buổi Chia Sẻ |
-| 2 | Team Cần Gì Từ AI? |
-| 3 | AI Update 2026: Từ Chatbot Sang Agent |
-| 4 | Chatbot -> AI Agent |
-| 5 | Common AI Agent |
-| 6 | Prompt Cho Agent |
-| 7 | Skill Ecosystem Map, plus 7a-7c reference subslides |
-| 8 | Agentic Coding Workflow |
-| 9 | Guardrails |
-| 10 | Demo build journey: problem, goal, stack, architecture, verification |
-| 11 | Demo proof: live build screenshot and USB Windows install video |
-| 12 | AI Work Paradox |
+| 1 | Cảm ơn Adam |
+| 2 | Mục Lục Buổi Chia Sẻ |
+| 3 | Team Cần Gì Từ AI? |
+| 4 | AI Update 2026: Từ Chatbot Sang Agent |
+| 5 | Chatbot -> AI Agent |
+| 6 | Common AI Agent |
+| 7 | Internal AI Agent Buildler: Alpha Intelligence & SMART intro only |
+| 8 | Prompt Cho Agent |
+| 9 | Skill Ecosystem Map, plus 9a-9c reference subslides |
+| 10 | Agentic Coding Workflow |
+| 11 | Guardrails |
+| 12 | Demo build journey: problem, goal, stack, architecture, verification |
+| 13 | PM brainstorm proof: two full-screen prompt/recommendation images |
+| 14 | Demo proof: full-screen Ocean USB Builder screenshot |
+| 15 | Real install proof: three real-device Windows install photos |
+| 16 | AI Work Paradox |
 | Final | Q&A |
 
 ## Demo Source Of Truth
@@ -48,6 +52,7 @@ Use these files first:
 - [Raw Tool Scan](raw-data/ocean-usb-builder-tool-scan.md)
 
 Do not reintroduce the older automation concepts as active demos. They were superseded when the user confirmed the only demo is the OSDCloud/Ocean USB Builder tool.
+Alpha Intelligence and SMART can be mentioned as internal build platforms, but keep them as intro/context unless the user explicitly asks for a dedicated demo.
 
 ## Design System
 
@@ -61,7 +66,7 @@ Do not reintroduce the older automation concepts as active demos. They were supe
 
 ## Development Notes
 
-- `index.html`: Cover, Slide 1-12, final Q&A and embedded Reveal speaker notes.
+- `index.html`: Cover, Slide 1-16, final Q&A and embedded Reveal speaker notes.
 - `style.css`: slide layout/design system.
 - `script.js`: Reveal initialization and particle background.
 - Use `python -m http.server 8000` to view locally.

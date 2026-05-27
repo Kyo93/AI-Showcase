@@ -24,28 +24,39 @@ robots: "index, follow"
 | Bối cảnh | 4 | AI Update 2026: Từ Chatbot Sang Agent | AI đang rời khỏi khung chat để đi vào workflow thật, có tool-use và governance. |
 | Khái niệm nền | 5 | Chatbot -> AI Agent | Làm rõ khác biệt giữa hỏi đáp và agent làm task nhiều bước. |
 | Ví dụ agent | 6 | Common AI Agent | Nhìn các agent phổ biến như Codex, Antigravity và Claude Code. |
-| Kỹ năng giao việc | 7 | Prompt Cho Agent | Dạy framework Goal, Context, Tools, Constraints, Checkpoint, Definition of Done. |
-| Skill ecosystem | 8 | Superpowers / GSD / CodyMaster + reference subslides | Giải thích skill như SOP cho AI, dùng khi workflow lặp lại. |
-| Workflow thực chiến | 9 | Agentic Coding Workflow | Đưa quy trình requirement -> read codebase -> plan -> verify -> handover. |
-| An toàn | 10 | Guardrails | Nhấn mạnh secret, data, approval gate, log, mock-first. |
-| Demo journey | 11 | Demo Hình Thành Như Thế Nào? | Cho người nghe thấy AI xác định pain point, goal, constraint, stack, architecture và verification. |
-| Demo proof | 12 | Ocean USB Builder Proof | Show ảnh build thật trong app và video USB boot/cài Windows. |
-| Góc nhìn chiến lược | 13 | AI Work Paradox | Nhanh hơn không tự động nhàn hơn; giá trị dịch sang phán đoán. |
+| Platform nội bộ | 7 | Alpha Intelligence & SMART | Nhắc công ty đã có hai platform build AI Agent; hôm nay chỉ giới thiệu ở mức bản đồ, không đi sâu. |
+| Kỹ năng giao việc | 8 | Prompt Cho Agent | Dạy framework Goal, Context, Tools, Constraints, Checkpoint, Definition of Done. |
+| Skill ecosystem | 9 | Superpowers / GSD / CodyMaster + reference subslides | Giải thích skill như SOP cho AI, dùng khi workflow lặp lại. |
+| Workflow thực chiến | 10 | Agentic Coding Workflow | Đưa quy trình requirement -> read codebase -> plan -> verify -> handover. |
+| An toàn | 11 | Guardrails | Nhấn mạnh secret, data, approval gate, log, mock-first. |
+| Demo journey | 12 | Demo Hình Thành Như Thế Nào? | Cho người nghe thấy AI xác định pain point, goal, constraint, stack, architecture và verification. |
+| PM proof | 13 | PM Brainstorm Proof | Show 2 ảnh prompt/ma trận đánh giá trước khi vào proof build thật. |
+| Demo proof | 14 | Ocean USB Builder Proof | Show ảnh build thật trong app dạng full-screen proof. |
+| Real install proof | 15 | Real Device Install Proof | Show 3 ảnh thực tế sau khi boot USB: deploy Windows, payload ready và cài app ở bước cuối. |
+| Góc nhìn chiến lược | 16 | AI Work Paradox | Nhanh hơn không tự động nhàn hơn; giá trị dịch sang phán đoán. |
 | Kết thúc | Final | Q&A | Mở câu hỏi: task lặp lại nào nên giao cho AI Agent tiếp theo? |
 
 ## Tóm Tắt Một Trang Để Mở Bài
 
 Buổi chia sẻ này có một thông điệp trung tâm: AI không còn chỉ là chatbot để hỏi đáp, mà đang chuyển thành AI Agent có thể đọc file, dùng tool, chạy task nhiều bước và tạo output thật. Vì vậy team cần một playbook thực dụng để biết cách giao việc, kiểm soát rủi ro và chọn đúng việc đáng làm.
 
-Mạch trình bày đi từ nhu cầu thật của team, mở rộng sang bối cảnh AI đang chuyển từ chatbot sang agent, rồi đi qua khái niệm nền, framework prompt, skill ecosystem, workflow Agentic Coding và guardrails. Sau đó bài đi vào hành trình hình thành Ocean USB Builder, ảnh/video proof của tool thật trước khi chốt bằng AI Work Paradox: nhanh hơn không tự động nhàn hơn nếu không có phán đoán và điểm dừng.
+Mạch trình bày đi từ nhu cầu thật của team, mở rộng sang bối cảnh AI đang chuyển từ chatbot sang agent, rồi đi qua khái niệm nền, ví dụ agent phổ biến, hai platform nội bộ Alpha Intelligence/SMART, framework prompt, skill ecosystem, workflow Agentic Coding và guardrails. Sau đó bài đi vào hành trình hình thành Ocean USB Builder, ảnh proof PM brainstorm, ảnh proof build thật full-screen và ảnh cài Windows thực tế trước khi chốt bằng AI Work Paradox: nhanh hơn không tự động nhàn hơn nếu không có phán đoán và điểm dừng.
 
 Phần demo duy nhất là Ocean USB Builder: một tool thật ở `C:\Users\Ocean\Documents\VibeCode\OSDCloud`, dùng để tạo USB boot Windows 11 Pro offline và stage apps/drivers. Demo này chứng minh cách AI Agentic có thể hỗ trợ build tool vận hành thật khi có requirement rõ, lựa chọn công nghệ phù hợp, architecture theo layer, verification và guardrail.
 
 ## Current Checklist
 
+- [x] Add OpenSpec handoff for the optional AI voice pilot.
+- [x] Add AI voice SOP, TTS-ready script segments, and audio manifest.
+- [x] Add optional deck audio control that appears only when a clip is reviewed and enabled.
+- [ ] Record presenter's clean voice sample.
+- [ ] Generate and review MP3 clips for Slides 12-15.
+- [ ] Enable approved clips in `assets/audio/voice-pilot/manifest.json` and rehearse playback.
 - [x] Read `cm-brainstorm-idea` and current project status.
 - [x] Convert current status into a presentation table of contents.
 - [x] Add a beginning agenda slide to the deck.
+- [x] Add internal platform intro slide for Alpha Intelligence and SMART after Common AI Agent.
+- [x] Add PM brainstorm proof image slide before the Ocean USB Builder demo proof.
 - [x] Update `presentation_script.md` to match the main slide flow plus 3 Skill reference subslides.
 - [x] Update docs/status files for the new slide order.
 - [x] Refresh deck visual system using AI/technology template references.
@@ -119,7 +130,7 @@ Phần demo duy nhất là Ocean USB Builder: một tool thật ở `C:\Users\Oc
 - [x] Consolidate demo proof media:
   - [x] Use `cm-brainstorm-idea` to compare media options and choose replacing the old demo/anatomy pair with a proof slide.
   - [x] Add OpenSpec under `openspec/changes/demo-media-proof/`.
-  - [x] Replace Slide 11 with screenshot/video proof slots.
+  - [x] Replace the demo proof media slide with an image-only proof slot.
   - [x] Remove the old duplicated `How to build?` anatomy slide.
 - [x] Add GSAP cover animation:
   - [x] Use `cm-brainstorm-idea` to compare cover animation options and choose entrance choreography plus active-step pulse.
@@ -143,7 +154,7 @@ Phần demo duy nhất là Ocean USB Builder: một tool thật ở `C:\Users\Oc
   - [x] Replace cover cinematic full-size images with lightweight thumbnails under `assets/images/cover-thumbs/`.
   - [x] Remove unused Reveal Markdown/Highlight plugin loads and the unused Outfit font family.
   - [x] Add CDN preconnect hints for Reveal/Font Awesome and GSAP.
-  - [x] Lazy-load non-cover screenshots and defer demo video loading until presenter interaction.
+  - [x] Lazy-load non-cover screenshots and keep demo proof image-only for clearer presenter flow.
   - [x] Pause the particle canvas outside cover/Q&A and make cursor spotlight animation event-driven.
   - [x] Verify initial load, cover cinematic, slide overflow and particle pause behavior.
 - [x] Expand Slide 12 AI Work Paradox:
@@ -160,7 +171,7 @@ Phần demo duy nhất là Ocean USB Builder: một tool thật ở `C:\Users\Oc
 
 ## Verification Targets
 
-- Speaker notes check: Cover, Slide 1-12, Q&A and Skill reference subslides are present.
+- Speaker notes check: Cover, Slide 1-16, Q&A and Skill reference subslides are present.
 - `node --check script.js` completes with exit code 0.
 - Local server check: `http://localhost:8000` returns status 200.
 - Markdown links OK.

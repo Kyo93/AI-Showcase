@@ -38,7 +38,7 @@ Tài liệu này là script nói theo từng slide. Khi trình chiếu, mở `ht
 * **Kịch bản nói:**
   > "Trước khi vào nội dung, mình muốn đưa mọi người một bản đồ rất ngắn của buổi hôm nay.
   >
-  > Chúng ta sẽ đi từ nhu cầu thật của team, sang bối cảnh AI đang chuyển sang agent, rồi làm rõ chatbot khác agent ở đâu và xem ví dụ Codex, Antigravity, Claude Code. Sau đó mình đi vào phần thực hành: prompt, skill, workflow và guardrails. Cuối cùng là hành trình build Ocean USB Builder, ảnh/video proof, rồi chốt bằng AI Work Paradox.
+  > Chúng ta sẽ đi từ nhu cầu thật của team, sang bối cảnh AI đang chuyển sang agent, rồi làm rõ chatbot khác agent ở đâu và xem ví dụ Codex, Antigravity, Claude Code. Sau đó mình đi vào phần thực hành: prompt, skill, workflow và guardrails. Cuối cùng là hành trình build Ocean USB Builder, ảnh brainstorm PM, ảnh proof build app, ảnh cài Windows thật, rồi chốt bằng AI Work Paradox.
   >
   > Mục tiêu không phải là mọi người nhớ hết tất cả công cụ. Mục tiêu là ra khỏi buổi này, mỗi người có thể chọn một task lặp lại trong công việc của mình và biết cách giao cho AI Agent một cách rõ ràng, an toàn, có kiểm chứng."
 
@@ -100,9 +100,22 @@ Tài liệu này là script nói theo từng slide. Khi trình chiếu, mở `ht
   >
   > Điểm chung không phải là tên tool. Điểm chung là workflow: brief, context, plan, build, verify và artifact. Artifact có thể là pull request, prototype, dashboard, automation script hoặc một internal tool.
   >
-  > Ocean USB Builder ở phần demo là một ví dụ theo hướng này: không phải hỏi AI một câu rồi xong, mà dùng agentic workflow để biến yêu cầu vận hành thành tool thật, có kiểm tra và có điểm dừng an toàn."
+  > Ocean USB Builder ở phần demo là một ví dụ theo hướng này: không phải hỏi AI một câu rồi xong, mà dùng agentic workflow để biến yêu cầu vận hành thành tool thật, có kiểm tra và có điểm dừng an toàn. Trước khi vào framework prompt, mình đặt thêm một mảnh ghép nội bộ: công ty mình cũng đã có platform để build agent."
 
-## Slide 7: How to Prompt?
+## Slide 7: Internal AI Agent Buildler
+
+* **Nội dung trên slide:** Alpha Intelligence và SMART là hai platform nội bộ để build AI Agent; đã được giới thiệu từ trước và nhiều người đã thử hoặc đang build trên đó, nên hôm nay chỉ nhắc ở mức bản đồ.
+* **Thời gian ước tính:** 2 phút.
+* **Kịch bản nói:**
+  > "Ngoài các agent phổ biến vừa nhắc, trong công ty mình cũng đã có hai platform để build AI Agent: Alpha Intelligence và SMART.
+  >
+  > Hai platform này không phải nội dung mới hoàn toàn. Chúng đã được giới thiệu từ trước, nhiều anh chị em đã thử, và cũng đã có người đang build use case thật trên đó. Vì vậy hôm nay mình không đi sâu vào cách dùng từng platform.
+  >
+  > Ở mức bản đồ, Alpha Intelligence thiên về workflow, chatflow, super agent, nodes, tools và knowledge/resources. SMART thiên về trải nghiệm agent builder trực quan hơn, nơi có thể cấu hình skills, knowledge, preview và release agent.
+  >
+  > Điểm cần nhớ là: nếu muốn build agent nội bộ, công ty đã có kênh để thử. Còn trọng tâm buổi này vẫn là playbook: giao việc rõ, context đúng, checkpoint rõ, guardrail rõ và có output kiểm chứng được. Từ đây mình chuyển sang phần prompt cho agent."
+
+## Slide 8: How to Prompt?
 
 * **Nội dung trên slide:** Goal, Context, Tools, Constraints, Checkpoint, Definition of Done.
 * **Thời gian ước tính:** 5 phút.
@@ -113,7 +126,7 @@ Tài liệu này là script nói theo từng slide. Khi trình chiếu, mở `ht
   >
   > Ví dụ, thay vì nói 'viết tool giúp tôi', hãy nói: 'Đọc codebase trước, lập plan, chỉ sửa các file liên quan, không xóa dữ liệu, chạy verification, rồi báo lại file đã đổi và cách kiểm tra'. Nếu prompt là brief cho một task, thì skill là cách đóng gói quy trình cho những task lặp lại."
 
-## Slide 8: Powerfull Skill
+## Slide 9: Powerfull Skill
 
 * **Nội dung trên slide:** Superpowers, GSD và CodyMaster đều được viết lại thành card chữ để giải thích ba lớp khác nhau của skill ecosystem.
 * **Thời gian ước tính:** 4 phút.
@@ -124,28 +137,28 @@ Tài liệu này là script nói theo từng slide. Khi trình chiếu, mở `ht
   >
   > Bài học không phải là dùng đúng ba bộ này, mà là cách nghĩ: khi một cách làm được lặp lại nhiều lần, hãy biến nó thành skill. Nếu chỉ dùng một lần, prompt rõ là đủ. Tiếp theo là cách ghép prompt và skill thành một workflow coding thực chiến."
 
-## Slide 8a: Superpowers Reference
+## Slide 9a: Superpowers Reference
 
 * **Nội dung trên slide:** Tóm tắt Superpowers bằng chữ: workflow, các skill chính và ý cần nhớ.
 * **Thời gian ước tính:** 45 giây.
 * **Kịch bản nói:**
   > "Superpowers là ví dụ về skill như một methodology. Task không đi thẳng vào code; nó đi qua brainstorm, plan, execution, TDD, review và finish. Điểm cần nhớ là skill không phải prompt dài hơn, mà là kỷ luật workflow: có gate, có review, có bằng chứng trước khi nói xong."
 
-## Slide 8b: GSD Reference
+## Slide 9b: GSD Reference
 
 * **Nội dung trên slide:** Tóm tắt GSD bằng chữ: catalog, skill directories, install/check/update và discovery mode.
 * **Thời gian ước tính:** 45 giây.
 * **Kịch bản nói:**
   > "GSD cho thấy góc vận hành của skill: có catalog, có nơi lưu global và project, có cách cài, check, update, và có chế độ discovery auto/suggest/off. Nghĩa là skill không chỉ để chạy một lần; nó có vòng đời giống một tài sản kỹ thuật."
 
-## Slide 8c: CodyMaster Reference
+## Slide 9c: CodyMaster Reference
 
 * **Nội dung trên slide:** Tóm tắt CodyMaster bằng chữ: one install, profiles, skill chaining, memory, safety gate và dashboard.
 * **Thời gian ước tính:** 45 giây.
 * **Kịch bản nói:**
   > "CodyMaster là ví dụ lớp workflow lớn hơn. Nếu Superpowers là kỷ luật task, GSD là catalog và lifecycle skill, thì CodyMaster là orchestration: nhiều skill chạy thành chain, có profile theo mức độ, có memory, có dashboard, có quality gate trước khi ship. Đây là cách nhìn skill như một hệ điều hành nhỏ cho AI Agent, không chỉ là một mẹo prompt."
 
-## Slide 9: Agentic coding workflow
+## Slide 10: Agentic coding workflow
 
 * **Nội dung trên slide:** Requirement -> Read codebase -> Plan -> Batch nhỏ -> Verify -> Review diff -> Docs/Handover.
 * **Thời gian ước tính:** 4 phút.
@@ -156,7 +169,7 @@ Tài liệu này là script nói theo từng slide. Khi trình chiếu, mở `ht
   >
   > Khi workflow bắt đầu chạm file, terminal hoặc hệ thống thật, guardrail trở thành phần bắt buộc."
 
-## Slide 10: Guardrails
+## Slide 11: Guardrails
 
 * **Nội dung trên slide:** Secret, data, destructive action, approval gate, mock-first.
 * **Thời gian ước tính:** 4 phút.
@@ -167,7 +180,7 @@ Tài liệu này là script nói theo từng slide. Khi trình chiếu, mở `ht
   >
   > Nguyên tắc thực tế là mock data trước, real data sau. Walkthrough trước, automation thật sau. Càng tự động hóa mạnh, càng phải có log, rollback, verification và ranh giới quyền rõ ràng. Với guardrail đó, mình đi vào demo thật: Ocean USB Builder."
 
-## Slide 11: Demo build journey
+## Slide 12: Demo build journey
 
 * **Nội dung trên slide:** Pain point vận hành -> mục tiêu/constraint -> stack -> kiến trúc layer -> verification/handover.
 * **Thời gian ước tính:** 4 phút.
@@ -182,20 +195,44 @@ Tài liệu này là script nói theo từng slide. Khi trình chiếu, mở `ht
   >
   > Vì vậy câu học được là: AI build được tool khi con người đóng vai PM, architect và reviewer. Mình vẫn quyết định mục tiêu, constraint, trade-off và điểm dừng. Bây giờ mình mở demo thật để mọi người thấy artifact cuối."
 
-## Slide 12: Demo proof
+## Slide 13: PM brainstorm proof
 
-* **Nội dung trên slide:** Ảnh build thật trong OceanUsbBuilder.exe và khung video USB boot/cài Windows.
+* **Nội dung trên slide:** Hai ảnh chụp prompt PM brainstorm: Image 01 phân tích bối cảnh/phương án, Image 02 ma trận đánh giá/recommendation.
+* **Thời gian ước tính:** 3 phút.
+* **Kịch bản nói:**
+  > "Trước khi show app chạy thật, mình muốn cho mọi người thấy điểm bắt đầu của demo. Đây là prompt mình dùng để yêu cầu AI đóng vai PM và phân tích cách build một tool tạo USB boot Windows 11 Pro offline.
+  >
+  > Image 01 cho thấy AI không nhảy thẳng vào code. Nó phân tích bối cảnh hệ thống, rào cản offline, driver, bảo trì và các phương án kiến trúc như Fat ISO, WinPE Dashboard và Modular Script.
+  >
+  > Image 02 là phần chốt quyết định: ma trận đánh giá, điểm số, recommendation và câu hỏi mở. Điểm mình muốn giữ lại là: output tốt không chỉ dài, mà phải có tiêu chí, trọng số, trade-off và câu hỏi tiếp theo để con người quyết định."
+
+## Slide 14: Demo proof
+
+* **Nội dung trên slide:** Ảnh build thật trong OceanUsbBuilder.exe, hiển thị full màn hình để thấy rõ chi tiết.
 * **Thời gian ước tính:** 8 phút.
 * **Kịch bản nói:**
   > "Bây giờ mình đi vào proof chính của demo: app không chỉ là mockup, mà đã chạy build thật.
   >
-  > Bên trái là Ocean USB Builder trong lúc build USB. Mọi người có thể thấy ISO đầu vào, target USB, danh sách app, driver folder, build log và progress. Đây là phần chứng minh engine thật sự đang chạy, không phải chỉ có giao diện.
+  > Ảnh này là Ocean USB Builder trong lúc build USB. Mọi người có thể thấy ISO đầu vào, target USB, danh sách app, driver folder, build log và progress. Đây là phần chứng minh engine thật sự đang chạy, không phải chỉ có giao diện.
   >
-  > Bên phải mình sẽ thêm video quay cảnh dùng USB này để boot và cài Windows. Khi có video, đây sẽ là bằng chứng đầu-cuối: app tạo media, media dùng được trên máy thật.
+  > Ảnh build app này mình vẫn để riêng một màn hình vì có nhiều trường nhỏ cần đọc: ISO, USB target, app list, driver, progress, log. Còn cụm ảnh cài Windows thực tế ở slide kế tiếp mình sẽ gom ba ảnh chung một màn hình, vì chúng là ba checkpoint của cùng một flow.
   >
-  > Lưu ý phần guardrail vẫn còn nguyên: đây là tool có thể format USB, nên build thật chỉ chạy với USB test và có xác nhận rõ. Vì Slide 10 đã giải thích architecture/layer rồi, mình bỏ slide anatomy riêng để tránh nói lại cùng một ý."
+  > Lưu ý phần guardrail vẫn còn nguyên: đây là tool có thể format USB, nên build thật chỉ chạy với USB test và có xác nhận rõ. Vì Slide 12 đã giải thích architecture/layer rồi, mình bỏ slide anatomy riêng để tránh nói lại cùng một ý."
 
-## Slide 13: AI Work Paradox
+## Slide 15: Real install proof
+
+* **Nội dung trên slide:** 3 ảnh thực tế sau khi boot USB vào máy: WinPE deploy, payload ready và post-install app.
+* **Thời gian ước tính:** 2 phút.
+* **Kịch bản nói:**
+  > "Đây là đoạn nối từ app build ra artifact vận hành thật. Ba ảnh này mình để chung một slide vì chúng kể cùng một chuỗi, không phải ba ý rời nhau.
+  >
+  > Ảnh đầu tiên là máy boot vào WinPE và chạy Ocean Offline Deploy. Script nhận diện USB, model máy, ổ target, driver pack và bắt đầu deploy Windows.
+  >
+  > Ảnh thứ hai là payload đã copy local và USB có thể rút ra để dùng cho máy tiếp theo. Đây là checkpoint cho thấy phần deploy offline đã có điểm dừng rõ, không phải chạy mù.
+  >
+  > Ảnh thứ ba mới là bước cuối: sau khi Windows lên, post-install bắt đầu cài app offline. Đây là phần chứng minh USB không chỉ cài OS, mà còn stage app payload và có log theo dõi. Điểm mình muốn chốt ở đây là: demo này không chỉ là giao diện đẹp. Nó đi được tới một flow offline, lặp lại được, có checkpoint và có bằng chứng thật trên máy."
+
+## Slide 16: AI Work Paradox
 
 * **Nội dung trên slide:** AI làm thực thi rẻ hơn, nhưng làm mất điểm dừng tự nhiên; giá trị dịch chuyển sang phán đoán, kỷ luật và biết không làm.
 * **Thời gian ước tính:** 6 - 8 phút.

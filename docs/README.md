@@ -34,6 +34,13 @@ Bộ tài liệu này làm rõ slide deck, nội dung thuyết trình và demo d
 | [Run Slide Deck](./sop/run-slide-deck.md) | Quy trình mở, kiểm tra và trình chiếu slide. |
 | [Live Demo Ocean USB Builder](./sop/live-demo-ocean-usb-builder.md) | Quy trình diễn demo tool tạo USB boot Windows an toàn. |
 
+## AI Voice Pilot
+
+| Document | Purpose |
+|----------|---------|
+| [AI Voice Pilot SOP](./sop/ai-voice-pilot.md) | Record, generate, QA and enable consented AI voice clips for the proof section. |
+| [AI Voice Pilot Script](../raw-data/ai-voice-pilot-script.md) | TTS-ready short script segments for Slides 12-15. |
+
 ## Tool Contracts
 
 | Document | Purpose |

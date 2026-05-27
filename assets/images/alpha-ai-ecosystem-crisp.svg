@@ -1,0 +1,153 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="760" viewBox="0 0 1400 760" role="img" aria-labelledby="title desc">
+  <title id="title">Alpha AI Ecosystem</title>
+  <desc id="desc">Alpha Intelligence ecosystem diagram showing Workflow, Chatflow and Super Agent connected to built-in nodes, user-generated tools, marketplaces, external resources and Alpha Knowledge.</desc>
+  <defs>
+    <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="12" stdDeviation="14" flood-color="#23145f" flood-opacity="0.12"/>
+    </filter>
+    <linearGradient id="purpleBox" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#8c69e8"/>
+      <stop offset="1" stop-color="#9a7bea"/>
+    </linearGradient>
+    <linearGradient id="nodeIcon" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ff9c45"/>
+      <stop offset="1" stop-color="#ff7628"/>
+    </linearGradient>
+    <linearGradient id="knowledgeBg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#e7f4ff"/>
+      <stop offset="1" stop-color="#d5eaff"/>
+    </linearGradient>
+    <style>
+      .title { font: 500 54px Arial, Helvetica, sans-serif; fill: #111827; }
+      .label { font: 700 25px Arial, Helvetica, sans-serif; fill: #111827; }
+      .small { font: 500 20px Arial, Helvetica, sans-serif; fill: #374151; }
+      .tiny { font: 600 15px Arial, Helvetica, sans-serif; fill: #374151; }
+      .white { fill: #fff; }
+      .stroke-purple { stroke: #9a72ea; stroke-width: 4; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+      .stroke-blue { stroke: #58a9f9; stroke-width: 4; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+      .dash { stroke-dasharray: 8 9; }
+    </style>
+  </defs>
+
+  <rect width="1400" height="760" rx="28" fill="#ffffff"/>
+  <text class="title" x="700" y="78" text-anchor="middle">Alpha AI Ecosystem</text>
+
+  <rect x="50" y="185" width="860" height="500" rx="28" fill="#f0ecff"/>
+  <g transform="translate(92 220)">
+    <path d="M0 25 L17 0 L32 25 Z" fill="#05007e"/>
+    <path d="M24 3 L42 3 L54 25 L36 25 Z" fill="#7c5ce4"/>
+    <path d="M39 3 L48 3 L42 13 Z" fill="#1492fd"/>
+    <text x="70" y="23" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="800" fill="#111827">Alpha Intelligence</text>
+  </g>
+
+  <path class="stroke-purple" d="M95 345 H135"/>
+  <path class="stroke-purple" d="M95 450 H135"/>
+  <path class="stroke-purple" d="M95 555 H135"/>
+  <path class="stroke-purple" d="M95 345 V642 H735 V612"/>
+
+  <g filter="url(#softShadow)">
+    <rect x="135" y="300" width="455" height="78" rx="20" fill="url(#purpleBox)"/>
+    <rect x="135" y="405" width="455" height="78" rx="20" fill="url(#purpleBox)"/>
+    <rect x="135" y="510" width="455" height="78" rx="20" fill="url(#purpleBox)"/>
+  </g>
+
+  <g transform="translate(280 323)">
+    <rect x="0" y="24" width="18" height="15" rx="2" fill="none" stroke="#fff" stroke-width="4"/>
+    <rect x="34" y="24" width="18" height="15" rx="2" fill="none" stroke="#fff" stroke-width="4"/>
+    <rect x="17" y="0" width="18" height="15" rx="2" fill="none" stroke="#fff" stroke-width="4"/>
+    <path d="M26 15 V24 M9 24 V18 H43 V24" stroke="#fff" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <text x="80" y="37" font-family="Arial, Helvetica, sans-serif" font-size="39" font-weight="800" fill="#fff">Workflow</text>
+  </g>
+
+  <g transform="translate(282 431)">
+    <path d="M0 0 H37 Q46 0 46 9 V31 Q46 40 37 40 H18 L5 52 V40 H0 Q-9 40 -9 31 V9 Q-9 0 0 0 Z" fill="none" stroke="#fff" stroke-width="5" stroke-linejoin="round"/>
+    <text x="80" y="36" font-family="Arial, Helvetica, sans-serif" font-size="39" font-weight="800" fill="#fff">Chatflow</text>
+  </g>
+
+  <text x="363" y="562" font-family="Arial, Helvetica, sans-serif" font-size="38" font-weight="800" fill="#fff" text-anchor="middle">Super Agent</text>
+
+  <path class="stroke-purple dash" d="M590 339 H635 V235 H1180 V215"/>
+  <path class="stroke-purple dash" d="M590 444 H635"/>
+  <path class="stroke-purple dash" d="M590 549 H635 V444"/>
+  <path class="stroke-purple" d="M676 432 l-34 26 l34 26"/>
+
+  <g filter="url(#softShadow)">
+    <rect x="720" y="305" width="250" height="110" rx="16" fill="#fff" stroke="#9a72ea" stroke-width="4"/>
+    <rect x="720" y="505" width="250" height="110" rx="16" fill="#fff" stroke="#9a72ea" stroke-width="4"/>
+  </g>
+  <text class="small" x="750" y="356">Platform Built In</text>
+  <text class="label" x="750" y="393">Nodes</text>
+  <g transform="translate(895 342)">
+    <path d="M0 22 L36 7 L72 22 L36 38 Z" fill="none" stroke="url(#nodeIcon)" stroke-width="5" stroke-linejoin="round"/>
+    <path d="M0 22 V54 L36 72 V38 M72 22 V54 L36 72" fill="none" stroke="url(#nodeIcon)" stroke-width="5" stroke-linejoin="round"/>
+    <circle cx="18" cy="4" r="8" fill="#fff" stroke="#ff842f" stroke-width="5"/>
+    <circle cx="53" cy="4" r="8" fill="#fff" stroke="#ff842f" stroke-width="5"/>
+  </g>
+
+  <text class="small" x="750" y="557">User-Generated</text>
+  <text class="label" x="750" y="594">Tools</text>
+  <g transform="translate(888 535)">
+    <path d="M48 6 Q64 18 50 34 L24 60 Q13 71 2 60 L12 50 Q18 56 24 50 L39 35 L31 27 L16 42 Q8 50 0 42 Q-8 34 0 26 L26 0 Q40 -14 54 -2 Z" fill="none" stroke="#8b62e6" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <text x="846" y="468" font-family="Arial, Helvetica, sans-serif" font-size="35" font-weight="800" fill="#111827" text-anchor="middle">+</text>
+
+  <path class="stroke-blue" d="M970 360 H1034 V255 H1080"/>
+  <path class="stroke-blue" d="M970 560 H1034 V455 H1080"/>
+  <path class="stroke-blue" d="M970 560 H1034 V632 H1080"/>
+  <path class="stroke-blue" d="M1034 455 H1080"/>
+  <path class="stroke-blue" d="M1034 632 H1080"/>
+  <path class="stroke-blue" d="M1034 560 H970"/>
+
+  <g filter="url(#softShadow)">
+    <rect x="1080" y="205" width="275" height="112" rx="22" fill="#fff" stroke="#9a72ea" stroke-width="4"/>
+    <rect x="1080" y="370" width="275" height="120" rx="22" fill="#ecffbf"/>
+    <rect x="1080" y="530" width="275" height="155" rx="22" fill="url(#knowledgeBg)"/>
+  </g>
+
+  <text class="small" x="1112" y="250">Marketplaces</text>
+  <g transform="translate(1115 268)">
+    <circle cx="22" cy="22" r="20" fill="#fff" stroke="#f1f5f9" stroke-width="2"/>
+    <path d="M12 18 Q12 8 22 8 Q32 8 32 18 V30 M12 30 Q12 38 22 38 Q32 38 32 30" fill="none" stroke="#111827" stroke-width="4" stroke-linecap="round"/>
+    <circle cx="12" cy="28" r="4" fill="#111827"/>
+    <circle cx="32" cy="28" r="4" fill="#111827"/>
+    <circle cx="82" cy="22" r="20" fill="#fff" stroke="#f1f5f9" stroke-width="2"/>
+    <path d="M72 12 V25 Q72 34 82 34 Q92 34 92 25 V12 M67 12 H77 M87 12 H97" fill="none" stroke="#111827" stroke-width="4" stroke-linecap="round"/>
+    <circle cx="142" cy="22" r="20" fill="#fff" stroke="#f1f5f9" stroke-width="2"/>
+    <circle cx="134" cy="22" r="3" fill="#111827"/>
+    <circle cx="142" cy="22" r="3" fill="#111827"/>
+    <circle cx="150" cy="22" r="3" fill="#111827"/>
+  </g>
+
+  <text class="small" x="1112" y="415">External Resources</text>
+  <g transform="translate(1115 435)">
+    <circle cx="22" cy="22" r="20" fill="#fff"/>
+    <path d="M11 22 H33 M22 11 V33 M13 13 Q22 4 31 13 M13 31 Q22 40 31 31" fill="none" stroke="#111827" stroke-width="4" stroke-linecap="round"/>
+    <circle cx="82" cy="22" r="20" fill="#fff"/>
+    <path d="M68 31 L88 11 Q96 3 104 11 Q112 19 104 27 L82 49" fill="none" stroke="#111827" stroke-width="6" stroke-linecap="round"/>
+    <circle cx="142" cy="22" r="20" fill="#fff"/>
+    <circle cx="134" cy="22" r="3" fill="#111827"/>
+    <circle cx="142" cy="22" r="3" fill="#111827"/>
+    <circle cx="150" cy="22" r="3" fill="#111827"/>
+  </g>
+
+  <g transform="translate(1110 558)">
+    <path d="M0 24 L18 0 L43 0 L60 24 Z" fill="#05007e"/>
+    <path d="M31 3 L54 3 L68 24 L45 24 Z" fill="#1492fd"/>
+    <text x="84" y="24" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="800" fill="#111827">Alpha Knowledge</text>
+  </g>
+  <g transform="translate(1100 606)">
+    <circle cx="42" cy="40" r="34" fill="#fff"/>
+    <path d="M18 31 L42 18 L66 31 L42 44 Z" fill="none" stroke="#111827" stroke-width="4" stroke-linejoin="round"/>
+    <path d="M26 36 V50 Q42 62 58 50 V36" fill="none" stroke="#111827" stroke-width="4" stroke-linejoin="round"/>
+    <text x="42" y="94" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="800" fill="#111827" text-anchor="middle">Expert</text>
+    <rect x="112" y="0" width="184" height="112" rx="14" fill="#fff"/>
+    <text x="136" y="34" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="700" fill="#111827">Knowledge Base</text>
+    <text x="136" y="60" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700" fill="#374151">PDF</text>
+    <text x="136" y="80" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700" fill="#374151">Web Data</text>
+    <text x="136" y="100" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700" fill="#374151">Google Drive</text>
+    <circle cx="252" cy="62" r="12" fill="#ff6257"/>
+    <text x="252" y="66" font-family="Arial, Helvetica, sans-serif" font-size="8" font-weight="800" fill="#fff" text-anchor="middle">PDF</text>
+    <circle cx="282" cy="62" r="12" fill="#3eb6ff"/>
+    <path d="M271 62 H293 M282 51 Q274 62 282 73 M282 51 Q290 62 282 73" stroke="#fff" stroke-width="2" fill="none"/>
+  </g>
+</svg>

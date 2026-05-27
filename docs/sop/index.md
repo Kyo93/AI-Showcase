@@ -32,12 +32,19 @@ Text fallback: the presenter verifies the slide deck, runs one Ocean USB Builder
 | 1 | [Run Slide Deck](./run-slide-deck.md) | Open, navigate and verify the Reveal.js presentation. | 5-10 min |
 | 2 | [Live Demo Ocean USB Builder](./live-demo-ocean-usb-builder.md) | Walk through the AI Agentic-built Windows USB builder tool safely. | 12-18 min |
 
+## Optional AI Voice SOP
+
+| SOP | Description | Time |
+|-----|-------------|------|
+| [AI Voice Pilot](./ai-voice-pilot.md) | Record, generate, QA and enable consented AI voice clips for the proof section. | 30-60 min |
+
 ## Recommended Rehearsal
 
 1. Run [Quality Checklist](../quality-checklist.md).
 2. Practice [Run Slide Deck](./run-slide-deck.md).
-3. Practice [Live Demo Ocean USB Builder](./live-demo-ocean-usb-builder.md).
-4. Prepare one fallback path: screenshots/logs/docs if the app cannot be opened live.
+3. If using synthetic audio, practice [AI Voice Pilot](./ai-voice-pilot.md).
+4. Practice [Live Demo Ocean USB Builder](./live-demo-ocean-usb-builder.md).
+5. Prepare one fallback path: screenshots/logs/docs if the app cannot be opened live.
 
 ## Related
 

@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "disclosure": "AI-generated voice clone of Ocean, used only with presenter consent for this internal presentation.",
+  "slides": {
+    "slide-12": {
+      "label": "AI voice · Slide 12",
+      "src": "assets/audio/voice-pilot/slide-12-demo-build-journey.mp3",
+      "ready": false
+    },
+    "slide-13a": {
+      "label": "AI voice · Slide 13A",
+      "src": "assets/audio/voice-pilot/slide-13a-pm-brainstorm-proof.mp3",
+      "ready": false
+    },
+    "slide-13b": {
+      "label": "AI voice · Slide 13B",
+      "src": "assets/audio/voice-pilot/slide-13b-pm-recommendation-proof.mp3",
+      "ready": false
+    },
+    "slide-14": {
+      "label": "AI voice · Slide 14",
+      "src": "assets/audio/voice-pilot/slide-14-demo-proof.mp3",
+      "ready": false
+    },
+    "slide-15": {
+      "label": "AI voice · Slide 15",
+      "src": "assets/audio/voice-pilot/slide-15-real-install-proof.mp3",
+      "ready": false
+    }
+  }
+}
