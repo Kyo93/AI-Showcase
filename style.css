@@ -3937,7 +3937,7 @@ body[data-slide-index="17"] .deck-footer-chrome {
 .pm-brief-proof-slide .proof-fullscreen-figure,
 .demo-proof-zoom-slide .proof-fullscreen-figure {
     width: auto;
-    height: 410px; /* Constrained height to fit 720px slides with header/footer */
+    height: 490px; /* Maximized height to fit 720px slides with header/footer */
     max-width: 100%;
     margin-inline: auto;
 }
@@ -3967,7 +3967,7 @@ body[data-slide-index="17"] .deck-footer-chrome {
 .real-install-proof-card.proof-fullscreen-figure {
     position: relative;
     width: 100%;
-    height: 380px; /* Limit height of 3 side-by-side images */
+    height: 430px; /* Maximized height for 3 side-by-side images */
     margin: 0;
     border-color: rgba(5, 0, 126, 0.16);
     background: linear-gradient(180deg, #f9fbff 0%, #edf5ff 100%);
