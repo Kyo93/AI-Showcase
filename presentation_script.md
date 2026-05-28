@@ -16,9 +16,9 @@ Tài liệu này là script nói theo từng slide. Khi trình chiếu, mở `ht
 * **Nội dung trên slide:** AI AGENT PLAYBOOK. Giao việc rõ. Kiểm chứng chắc. Demo thật. Minh họa: Ocean USB Builder.
 * **Thời gian ước tính:** 2 phút.
 * **Kịch bản nói:**
-  > "Chào mọi người. Buổi hôm nay là AI Agent Playbook: một buổi chia sẻ thực dụng về cách giao việc cho AI Agent, cách kiểm chứng kết quả và cách đặt guardrails để dùng AI an toàn trong công việc thật.
+  > "Xin chào anh em. Cám ơn mọi người đã dành thời gian để tham gia buổi chia sẻ hôm nay. Do Nam yêu cầu mình chia sẻ kiến thức về AI nên mới có buổi hôm nay. Mình sẽ chia sẻ tất cả các kiến thức về AI mà mình mới update được trong thời gian gần đây. Tuy nhiên do thời gian có hạn hôm nay sẽ chỉ tập trung vào Agentic AI, AI Agent"
   >
-  > Phần cuối chỉ có một demo chính là Ocean USB Builder. Mình sẽ dùng demo đó để minh họa cách một workflow agentic có thể đi từ requirement rõ ràng tới một công cụ vận hành được."
+  > "Phần cuối sẽ có một số demo về các sản phẩm gần đây mình làm ra được trong lúc tranh thủ công ty đang cho Unlimited token của Codex"
 
 ## Slide 1: Cảm ơn Adam
 
@@ -36,9 +36,9 @@ Tài liệu này là script nói theo từng slide. Khi trình chiếu, mở `ht
 * **Nội dung trên slide:** Bản đồ 6 phần của buổi thuyết trình.
 * **Thời gian ước tính:** 2 phút.
 * **Kịch bản nói:**
-  > "Trước khi vào nội dung, mình muốn đưa mọi người một bản đồ rất ngắn của buổi hôm nay.
+  > "Trước khi bắt đầu thì mình muốn giới thiệu qua về nội dung của buổi thuyết trình hôm nay
   >
-  > Chúng ta sẽ đi từ nhu cầu thật của team, sang bối cảnh AI đang chuyển sang agent, rồi làm rõ chatbot khác agent ở đâu và xem ví dụ Codex, Antigravity, Claude Code. Sau đó mình đi vào phần thực hành: prompt, skill, workflow và guardrails. Cuối cùng là hành trình build Ocean USB Builder, ảnh brainstorm PM, ảnh proof build app, ảnh cài Windows thật, rồi chốt bằng AI Work Paradox.
+  > Phần một là mình sẽ xem lại kết quả khảo sát nội bộ, cũng chính từ kết quả này mình mới đưa ra các nội dung sau cho buổi chia sẻ hôm nay. Phần 2 là mình sẽ giới thiệu về các công cụ và xu thế AI hiện tại,phần 03 là phân tích sự khác nhau giữa Chatbot và AI Agent, phần 04 là mình sẽ đi sâu vào các kỹ thuật prompt, skill, workflow và guardrails. Sau đó là phần demo một số dự án thực tế đã được làm bằng AI. Cuối cùng là Q&A và một số kinh nghiệm mà bản thân mình đã rút ra sau 2 tháng sử dụng AI.
   >
   > Mục tiêu không phải là mọi người nhớ hết tất cả công cụ. Mục tiêu là ra khỏi buổi này, mỗi người có thể chọn một task lặp lại trong công việc của mình và biết cách giao cho AI Agent một cách rõ ràng, an toàn, có kiểm chứng."
 
@@ -49,13 +49,13 @@ Tài liệu này là script nói theo từng slide. Khi trình chiếu, mở `ht
 * **Kịch bản nói:**
   > "Mình bắt đầu từ nhu cầu của team trước, vì đây không phải một buổi điểm tin AI chung chung.
   >
-  > Click đầu tiên: khảo sát có 13 phản hồi từ ngày 07/05 đến 18/05/2026. Về format, 7 người chọn live demo, 5 người chọn case study và 1 người chọn hỏi đáp. Gộp lại là 12/13 người, tương đương 92.3%, muốn thấy demo hoặc case thực tế. Nên buổi này không thể chỉ nói lý thuyết. Nó phải có output thật.
+  > Click đầu tiên: khảo sát có 13 phản hồi từ ngày 07/05 đến 18/05/2026. Về format, 7 người chọn live demo, 5 người chọn case study và 1 người chọn hỏi đáp. Gộp lại là 12/13 người, tương đương 92.3%, muốn thấy demo hoặc case thực tế. Nên buổi này không thể chỉ nói lý thuyết. Mà sẽ show một số sản phẩm mình đã làm bằng AI để mọi người nếu thấy hứng thú thì có thể cùng nhau sử dụng và cải tiến thêm.
   >
-  > Click thứ hai: với câu hỏi chọn nhiều, có tổng cộng 36 lượt chọn chủ đề. Tự động hóa và workflow đứng đầu với 12/13, kỹ thuật prompt nâng cao đứng ngay sau với 11/13. Sau đó là AI trong coding 6/13, tư duy sản phẩm AI 5/13, và AI cho thiết kế UI/UX 2/13.
+  > Click thứ hai: Có tổng cộng 36 lượt chọn chủ đề. Tự động hóa và workflow đứng đầu với 12/13, kỹ thuật prompt nâng cao đứng ngay sau với 11/13. Sau đó là AI trong coding 6/13, tư duy sản phẩm AI 5/13, và AI cho thiết kế UI/UX 2/13.
   >
   > Click thứ ba: từ các câu hỏi và phản hồi mở, mình gom lại thành bốn chủ đề chính mà buổi chia sẻ này sẽ trả lời. Một là xu thế AI hiện nay, đi từ chatbot hội thoại sang agent tự chạy task. Hai là Agentic AI có thể làm gì: lập plan, dùng tool, đọc code. Ba là cách prompt hiệu quả: giao việc bằng brief có Goal, Context, Constraints, Checkpoint và DoD rõ ràng. Bốn là AI trong môi trường Enterprise, bao gồm dùng platform nội bộ và bảo đảm an toàn dữ liệu qua Guardrails.
   >
-  > Click cuối: vì vậy case thực tế là Ocean USB Builder, một tool thật để nối survey, playbook và guardrails.
+  > Click cuối: Cuối cùng là mình đã áp dụng AI như thế nào để xây dựng nên một tool có thể sử dụng trong thực tế
   >
   > Trước khi vào cách làm, mình muốn zoom ra một bước: vì sao đúng thời điểm này AI lại chuyển mạnh từ chatbot sang agent?"
 ## Slide 4: AI Trend update
@@ -63,30 +63,36 @@ Tài liệu này là script nói theo từng slide. Khi trình chiếu, mở `ht
 * **Nội dung trên slide:** AI đã rời khỏi khung chat và bắt đầu đi vào workflow thật.
 * **Thời gian ước tính:** 3 phút.
 * **Kịch bản nói:**
-  > "Từ nhu cầu của team, mình zoom ra bối cảnh rộng hơn. Phần update này mình giữ ngắn vì mục tiêu không phải điểm tin. Câu đinh là: AI đã rời khỏi khung chat và bắt đầu đi vào workflow thật.
+  > "Từ nhu cầu của team, mình zoom ra bối cảnh rộng hơn. Để xem gần đây AI có gì mới có gì hay mà team mình cần phải cập nhật để có thể áp dụng vào công việc. Và mình nhận ra "AI đã rời khỏi khung chat và bắt đầu đi vào workflow thật". Lý do tại sao lại như vậy?
   >
-  > Click đầu tiên: model làm được việc dài hơi hơn, từ code, research, data, documents đến software operation.
+  > Click đầu tiên: model làm được việc dài hơi hơn bộ nhớ lên tới 1M context, làm được đa dạng công việc hơn từ code, research, data, documents đến software operation. Ví dụ như các bạn có thể thấy Gemini 3 Pro có thể xử lý tới 1M context, điều này có nghĩa là nó có thể xử lý tới 700.000 từ, tương đương với việc nó có thể đọc và hiểu toàn bộ nội dung của 1 cuốn tiểu thuyết dày. Ví dụ cụ thể hơn như trong các dự án lớn, bộ nhớ 1M có thể giúp AI đọc và hiểu toàn bộ nội dung của các repo, các tài liệu kỹ thuật, các API docs. Điều này giúp AI có thể hiểu sâu sắc hơn về dự án và có thể đưa ra các giải pháp chính xác và hiệu quả hơn.
   >
-  > Click thứ hai: coding agent bắt đầu nhận task end-to-end: đọc repo, lập plan, sửa file, chạy test và review diff.
+  > Click thứ hai: coding agent bắt đầu nhận task end-to-end: đọc repo, lập plan, sửa file, chạy test và review diff. Nó có thể độc lập suy luận và lấy thông tin từ nhiều nguồn khác nhau để tham khảo cũng như tự phát hiện ra các lỗi sai, bug, lỗi bảo mật bằng nhiều cách khác nhau. Tự test, tự debug... Không chỉ đơn thuần là một công cụ hỗ trợ mà nó đã trở thành một đồng nghiệp giúp chúng ta giải quyết các công việc một cách độc lập, nhanh chóng và hiệu quả hơn. Mình còn thấy có một số tool còn được tích hợp vào các IDE để có thể sử dụng ngay trong quá trình lập trình. Ví dụ cụ thể hơn như việc lập trình viên có thể yêu cầu AI Agent đọc toàn bộ repo, phân tích kiến trúc, tìm ra các API chưa được sử dụng hoặc các điểm nóng về hiệu năng, sau đó AI Agent có thể tự động viết các unit test, integration test và thậm chí là tự động fix các lỗi nhỏ hoặc đề xuất các cải tiến cho code, sau đó gửi cho lập trình viên review và merge. 
   >
-  > Click thứ ba: tool ecosystem trở thành hạ tầng để Agent lấy đúng context và dùng đúng công cụ: MCP, connector, skill, docs, repo, API và business tools.
+  > Click thứ ba: Hệ sinh thái công cụ (tool ecosystem) đang bùng nổ, đóng vai trò như "tay chân" giúp AI tương tác với thế giới thực. Trước đây AI chỉ có "não" để suy nghĩ và trò chuyện, còn bây giờ chúng đã có hạ tầng để thực hiện hành động thông qua MCP, connectors, skills, API hay các business tools. Ví dụ, với giao thức MCP, AI có thể chủ động đọc tài liệu của bên thứ ba, kết nối trực tiếp với database hoặc gọi các dịch vụ bên ngoài để lấy dữ liệu thời gian thực. Hệ sinh thái này giúp biến suy nghĩ của AI thành kết quả vận hành cụ thể.
   >
-  > Click thứ tư: governance trở thành bắt buộc: quyền truy cập, approval gate, log, audit và sandbox.
+  > Click thứ tư: Khi AI đã có cả "não" lẫn "tay chân" để tự vận hành, thì quản trị hệ thống (governance) trở thành yếu tố bắt buộc để đảm bảo an toàn. Chúng ta không thể để một Agent tự ý sửa code hay gọi API mà thiếu sự kiểm soát. Vì vậy, các cơ chế như giới hạn quyền truy cập, thiết lập chốt phê duyệt từ con người (approval gate) trước các hành động quan trọng, ghi chép nhật ký hoạt động (log & audit), và chạy thử trong môi trường cô lập (sandbox) là cực kỳ quan trọng để đảm bảo Agent hoạt động trong ranh giới an toàn.
   >
-  > Click cuối: câu hỏi mới không còn là AI trả lời gì, mà là Agent được phép làm gì và kiểm chứng ra sao. Từ đây mình quay lại khái niệm nền: chatbot khác agent ở đâu?"
+  > Click cuối: Câu hỏi mới không còn là AI trả lời gì, mà là Agent được phép làm gì và kiểm chứng ra sao. Từ đây mình quay lại khái niệm nền: chatbot khác agent ở đâu?"
 
 ## Slide 5: Chatbot vs AI Agent
 
 * **Nội dung trên slide:** So sánh chatbot tạo câu trả lời với AI Agent chạy workflow có goal, context, tool, checkpoint và Definition of Done.
 * **Thời gian ước tính:** 4 phút.
 * **Kịch bản nói:**
-  > "Chatbot phản hồi theo từng câu hỏi. Nó phù hợp để hỏi nhanh, tóm tắt, viết nháp hoặc giải thích khái niệm.
+  > "Để phân biệt rõ ràng, chúng ta cùng so sánh Chatbot và AI Agent qua 4 yếu tố cốt lõi hiển thị trên slide:
   >
-  > AI Agent thì khác. Agent không chỉ trả lời, mà nhận mục tiêu rồi chạy một workflow: lấy context, dùng công cụ, làm nhiều bước, kiểm tra output và báo lại bằng chứng hoàn thành.
+  > Thứ nhất là Cách hoạt động: Chatbot hoạt động thụ động theo cơ chế hỏi-đáp từng câu đơn lẻ. Còn AI Agent nhận một mục tiêu lớn (Goal), tự lập kế hoạch (Plan), chia việc và tự chạy liên tục nhiều bước.
   >
-  > Với Ocean USB Builder chẳng hạn: chatbot có thể gợi ý lệnh tạo USB. Agent có thể đọc repo, kiểm tra manifest, chạy build hoặc mock, review log, rồi dừng trước thao tác format USB nếu chưa có approval.
+  > Thứ hai là Ngữ cảnh (Context): Chatbot chỉ biết những gì đang hiển thị trong khung chat hiện tại. Trong khi đó, Agent có thể chủ động đọc toàn bộ repository, file code, tài liệu hướng dẫn và log lỗi để có góc nhìn toàn diện.
   >
-  > Nhưng Agent mạnh hơn không có nghĩa là mình buông tay. Agent càng có quyền thao tác thật thì brief càng phải rõ, quyền hạn càng phải chặt, và điểm cần hỏi lại con người càng phải được định nghĩa trước. Từ đây, chúng ta cần một framework prompt mới cho agent."
+  > Thứ ba là Khả năng dùng công cụ (Tool use): Khi cần chạy một tác vụ, Chatbot chỉ gợi ý dòng lệnh trên màn hình để bạn tự copy-paste chạy thủ công. Còn Agent có thể tự tương tác với terminal, trình duyệt, editor và API để trực tiếp xử lý công việc.
+  >
+  > Cuối cùng là Khả năng kiểm soát: Vì Chatbot không can thiệp trực tiếp vào hệ thống nên rủi ro rất thấp. Ngược lại, Agent có quyền tác động vào file và hệ thống thật, nên bắt buộc phải có cơ chế bảo vệ như môi trường cô lập (sandbox), các chốt duyệt (approval gate) và log theo dõi rõ ràng.
+  >
+  > Ví dụ thực tế với dự án Ocean USB Builder: Chatbot chỉ có thể chỉ cho bạn lệnh PowerShell để tạo USB boot. Nhưng một Agentic workflow có thể đọc file cấu hình, chuẩn bị driver, tự tạo file build, kiểm tra log chạy thử, và tự động dừng lại yêu cầu bạn xác nhận trước khi thực hiện thao tác format USB thật.
+  >
+  > Do Agent có nhiều quyền thực thi hơn, cách chúng ta giao việc cho Agent cũng phải thay đổi. Chúng ta không thể prompt theo kiểu chat thông thường mà cần một framework prompt chuyên dụng."
 
 ## Slide 6: Common AI Agent
 
@@ -110,31 +116,32 @@ Tài liệu này là script nói theo từng slide. Khi trình chiếu, mở `ht
   >
   > Hai platform này không phải nội dung mới hoàn toàn. Chúng đã được giới thiệu từ trước, nhiều anh chị em đã thử, và cũng đã có người đang build use case thật trên đó. Vì vậy hôm nay mình không đi sâu vào cách dùng từng platform.
   >
-  > Ở mức bản đồ, Alpha Intelligence thiên về workflow, chatflow, super agent, nodes, tools và knowledge/resources. SMART thiên về trải nghiệm agent builder trực quan hơn, nơi có thể cấu hình skills, knowledge, preview và release agent.
+  > Ở mức bản đồ, Alpha Intelligence thiên về workflow, chatflow, super agent, nodes, tools và knowledge/resources. SMART thiên về trải nghiệm agent builder trực quan hơn, và ưu tiên các team nội bộ sử dụng để build tool chọc vào data nội bộ. Nó có tích hợp nhiều tính năng AI để tự gen ra prompt hoặc code đáng để thử.
   >
-  > Điểm cần nhớ là: nếu muốn build agent nội bộ, công ty đã có kênh để thử. Còn trọng tâm buổi này vẫn là playbook: giao việc rõ, context đúng, checkpoint rõ, guardrail rõ và có output kiểm chứng được. Từ đây mình chuyển sang phần prompt cho agent."
+  > Điểm cần nhớ là: nếu muốn build agent nội bộ, công ty đã có kênh cung cấp và nó đã tích hợp được vào một vài hệ thống data nội bộ, đây vẫn là tool chính thống để trong việc build agent mà có thể đem đi trình diễn được. Tuy nhiên hôm nay mình sẽ không đi sâu vào các tool nội bộ, mà sẽ tập trung vào các tool phổ biến mà ngoài kia nhà nhà đang sử dụng. Điểm mấu chốt là cách prompt sao cho AI hoạt động hiệu quả, người dùng tiết kiệm được token chính là tiết kiệm được tiền"
 
 ## Slide 8: How to Prompt?
 
 * **Nội dung trên slide:** Goal, Context, Tools, Constraints, Checkpoint, Definition of Done.
 * **Thời gian ước tính:** 5 phút.
 * **Kịch bản nói:**
-  > "Prompt cho chatbot thường chỉ cần một câu hỏi tốt. Prompt cho Agent phải giống một brief công việc.
+  > "Prompt cho chatbot thường chỉ cần một câu hỏi tốt. Prompt cho Agent phải giống một brief công việc. Mục tiêu là khi AI đọc xong brief có thể tự tin làm mà không cần phải hỏi thêm nhiều lần. Nếu như prompt không rõ ràng thì AI sẽ hỏi lại và không thể tự làm một mạch được. Để cho agent hiểu rõ và làm việc hiệu quả thì prompt cần có các thành phần sau.
   >
   > Mình hay dùng sáu phần. Goal: kết quả cuối cùng là gì. Context: dữ liệu, repo, file, business background. Tools: Agent được dùng công cụ nào. Constraints: không được làm gì, giới hạn bảo mật và phạm vi sửa. Checkpoint: khi nào phải hỏi lại. Definition of Done: thế nào là xong thật.
   >
-  > Ví dụ, thay vì nói 'viết tool giúp tôi', hãy nói: 'Đọc codebase trước, lập plan, chỉ sửa các file liên quan, không xóa dữ liệu, chạy verification, rồi báo lại file đã đổi và cách kiểm tra'. Nếu prompt là brief cho một task, thì skill là cách đóng gói quy trình cho những task lặp lại."
+  > Ví dụ, thay vì nói 'viết tool giúp tôi', hãy nói: 'Đóng vai senior engineer. Đọc repo, lập plan trước khi sửa. Chỉ chỉnh file liên quan. Không chạy lệnh phá hủy. Sau mỗi batch, chạy verification và báo diff. Xong khi test pass, docs cập nhật và có handover ngắn'. 
+  >
+  > Nếu prompt là brief cho một task, thì skill là cách đóng gói workflow cho những task lặp lại.Slide sau mình sẽ giới thiệu các skill hay ho cho mọi người"
 
 ## Slide 9: Powerfull Skill
 
 * **Nội dung trên slide:** Superpowers, GSD và CodyMaster đều được viết lại thành card chữ để giải thích ba lớp khác nhau của skill ecosystem.
 * **Thời gian ước tính:** 4 phút.
 * **Kịch bản nói:**
-  > "Ở phần này mình không lấy ví dụ từ máy local. Mình dùng ba minh họa tham chiếu từ GitHub hoặc docs công khai để mọi người thấy skill thực chất là cách đóng gói workflow.
-  >
+Mình giới thiệu 3 bộ skill phổ biến hiện tại. Thực ra skill nó chỉ là cách đóng gói prompt lại mà thôi. Nhưng để làm ra được nó thì lại cần có một chuyên môn nhất định về lĩnh vực đó. Nên để tạo ra được một skill hữu ích khá mất thời gian và công sức, phải thử đi thử lại nhiều lần, phải trải nghiệm đủ nhiều để biết lúc nào AI dễ bị sai.
   > Superpowers cho thấy task không đi thẳng vào code mà phải qua spec, implementation và review. GSD cho thấy mặt vận hành của skill: phát hiện tech stack, đề xuất pack, cài bằng CLI, check, update và kiểm soát discovery mode. CodyMaster minh họa lớp orchestration lớn hơn: profile, skill chain, dashboard, quality gate và handover.
-  >
-  > Bài học không phải là dùng đúng ba bộ này, mà là cách nghĩ: khi một cách làm được lặp lại nhiều lần, hãy biến nó thành skill. Nếu chỉ dùng một lần, prompt rõ là đủ. Tiếp theo là cách ghép prompt và skill thành một workflow coding thực chiến."
+  > 
+  > Bài học không phải là dùng đúng ba bộ này, mà là cách nghĩ: khi một cách làm được lặp lại nhiều lần, hãy biến nó thành skill. Nếu chỉ dùng một lần, prompt rõ là đủ."
 
 ## Slide 9a: Superpowers Reference
 
@@ -156,6 +163,8 @@ Tài liệu này là script nói theo từng slide. Khi trình chiếu, mở `ht
 * **Thời gian ước tính:** 45 giây.
 * **Kịch bản nói:**
   > "CodyMaster là ví dụ lớp workflow lớn hơn. Nếu Superpowers là kỷ luật task, GSD là catalog và lifecycle skill, thì CodyMaster là orchestration: nhiều skill chạy thành chain, có profile theo mức độ, có memory, có dashboard, có quality gate trước khi ship. Đây là cách nhìn skill như một hệ điều hành nhỏ cho AI Agent, không chỉ là một mẹo prompt."
+
+> Tiếp theo là cách ghép prompt và skill thành một workflow coding thực chiến
 
 ## Slide 10: Agentic coding workflow
 
@@ -186,24 +195,29 @@ Tài liệu này là script nói theo từng slide. Khi trình chiếu, mở `ht
 * **Kịch bản nói:**
   > "Trước khi mở app, mình muốn trả lời câu hỏi quan trọng hơn: AI đã giúp build app này theo quá trình nào?
   >
-  > Điểm bắt đầu không phải là code. Điểm bắt đầu là pain point vận hành: chuẩn bị máy mới có nhiều bước lặp lại, dễ lệch chuẩn và nếu làm sai có thể mất dữ liệu trên USB.
+  > Điểm bắt đầu không phải là code. Điểm bắt đầu là pain point vận hành: chuẩn bị máy mới có nhiều bước lặp lại, dễ lệch chuẩn và nếu làm sai vì lỗi con người. Thêm nữa mỗi người có thể làm một kiểu quên hoặc sót app này app kia khi cài máy.
   >
-  > Từ đó mình biến bài toán thành brief cho Agent: cần một GUI cho admin, chạy trên Windows, Windows 11 Pro cố định, offline-first, không show secret, và mọi thao tác format USB phải có xác nhận.
-  >
-  > AI không tự chọn stack một cách ngẫu nhiên. Nó đọc bối cảnh rồi đề xuất chia lớp: WPF cho app desktop, PowerShell cho engine deployment, Apps.json cho manifest, WinPE cho runtime cài máy và docs/tests để bàn giao.
+  > Từ đó mình biến bài toán thành brief cho Agent: Cần tạo ra một tool để setup máy mới. Giúp helpdesk có thể setup máy mà không mắc phải sai sót, cũng như nhanh chóng hơn. Từ đó đưa ra ý tưởng về một tool tạo ra USB boot để cài windows offline (do MDT gần đây đã ngừng hỗ trợ). AI cũng đề xuất tech stack như WPF cho app desktop, PowerShell cho engine deployment, Apps.json cho manifest, WinPE cho runtime cài máy và docs/tests để bàn giao. Nó đọc bối cảnh và đề xuất các lớp công nghệ khác nhau để giải quyết bài toán, mình chỉ cần đưa rõ bối cảnh, các điều kiện cụ thể nó sẽ tự research để đáp ứng. Ví dụ như với yêu cầu offline, AI đề xuất sử dụng WinPE thay vì dùng các công cụ khác. Điều này giúp giảm thiểu rủi ro liên quan đến kết nối mạng.
   >
   > Vì vậy câu học được là: AI build được tool khi con người đóng vai PM, architect và reviewer. Mình vẫn quyết định mục tiêu, constraint, trade-off và điểm dừng. Bây giờ mình mở demo thật để mọi người thấy artifact cuối."
 
-## Slide 13: PM brainstorm proof
+## Slide 13: PM brainstorm proof 01
 
-* **Nội dung trên slide:** Hai ảnh chụp prompt PM brainstorm: Image 01 phân tích bối cảnh/phương án, Image 02 ma trận đánh giá/recommendation.
-* **Thời gian ước tính:** 3 phút.
+* **Nội dung trên slide:** Ảnh chụp prompt PM brainstorm: Image 01 phân tích bối cảnh/phương án.
+* **Thời gian ước tính:** 1.5 phút.
 * **Kịch bản nói:**
-  > "Trước khi show app chạy thật, mình muốn cho mọi người thấy điểm bắt đầu của demo. Đây là prompt mình dùng để yêu cầu AI đóng vai PM và phân tích cách build một tool tạo USB boot Windows 11 Pro offline.
+  > "Trước khi show app chạy thật, mình muốn cho mọi người thấy điểm bắt đầu của demo. Đây là prompt mình dùng để yêu cầu AI đóng vai PM và phân tích cách chế tạo một tool tạo USB boot Windows 11 Pro offline.
   >
-  > Image 01 cho thấy AI không nhảy thẳng vào code. Nó phân tích bối cảnh hệ thống, rào cản offline, driver, bảo trì và các phương án kiến trúc như Fat ISO, WinPE Dashboard và Modular Script.
+  > Image 01 cho thấy AI không nhảy thẳng vào code. Nó phân tích bối cảnh hệ thống, rào cản môi trường offline, driver, việc bảo trì dài hạn và đưa ra các phương án kiến trúc cụ thể như Fat ISO, WinPE Dashboard hay Modular Script để mình so sánh."
+
+## Slide 13b: PM brainstorm proof 02
+
+* **Nội dung trên slide:** Ảnh chụp prompt PM brainstorm: Image 02 ma trận đánh giá/recommendation.
+* **Thời gian ước tính:** 1.5 phút.
+* **Kịch bản nói:**
+  > "Sang Image 02 là phần chốt quyết định sau khi đã liệt kê các phương án. AI lập một ma trận đánh giá bao gồm điểm số, khuyến nghị (recommendation) và các câu hỏi mở.
   >
-  > Image 02 là phần chốt quyết định: ma trận đánh giá, điểm số, recommendation và câu hỏi mở. Điểm mình muốn giữ lại là: output tốt không chỉ dài, mà phải có tiêu chí, trọng số, trade-off và câu hỏi tiếp theo để con người quyết định."
+  > Điểm quan trọng nhất mình rút ra ở đây là: một output tốt của AI không chỉ nằm ở việc viết dài hay viết nhiều code, mà nằm ở chỗ nó phải đưa ra được tiêu chí rõ ràng, có trọng số đánh giá, phân tích rõ ràng những được và mất (trade-off) để con người dễ dàng đưa ra quyết định cuối cùng."
 
 ## Slide 14: Demo proof
 
@@ -214,9 +228,7 @@ Tài liệu này là script nói theo từng slide. Khi trình chiếu, mở `ht
   >
   > Ảnh này là Ocean USB Builder trong lúc build USB. Mọi người có thể thấy ISO đầu vào, target USB, danh sách app, driver folder, build log và progress. Đây là phần chứng minh engine thật sự đang chạy, không phải chỉ có giao diện.
   >
-  > Ảnh build app này mình vẫn để riêng một màn hình vì có nhiều trường nhỏ cần đọc: ISO, USB target, app list, driver, progress, log. Còn cụm ảnh cài Windows thực tế ở slide kế tiếp mình sẽ gom ba ảnh chung một màn hình, vì chúng là ba checkpoint của cùng một flow.
-  >
-  > Lưu ý phần guardrail vẫn còn nguyên: đây là tool có thể format USB, nên build thật chỉ chạy với USB test và có xác nhận rõ. Vì Slide 12 đã giải thích architecture/layer rồi, mình bỏ slide anatomy riêng để tránh nói lại cùng một ý."
+  > Lưu ý phần guardrail vẫn còn nguyên: đây là tool có thể format USB, nên build thật chỉ chạy với USB test và có xác nhận rõ
 
 ## Slide 15: Real install proof
 

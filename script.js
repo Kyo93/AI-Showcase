@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // 1. Initialize Reveal.js Safely (Defensive load)
     const activePlugins = [];
     if (typeof RevealNotes !== 'undefined') activePlugins.push(RevealNotes);
+    if (typeof RevealAudioSlideshow !== 'undefined') activePlugins.push(RevealAudioSlideshow);
 
     Reveal.initialize({
         width: 1280,
@@ -26,6 +27,15 @@ document.addEventListener('DOMContentLoaded', () => {
         transition: 'convex', // none/fade/slide/convex/concave/zoom
         transitionSpeed: 'fast', // default/fast/slow
         backgroundTransition: 'fade',
+        
+        audio: {
+            prefix: 'assets/audio/',
+            suffix: '.mp3',
+            defaultDuration: 5,
+            defaultAudios: true,
+            autoplay: true,
+            advance: -1
+        },
         
         plugins: activePlugins
     });
