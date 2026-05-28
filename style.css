@@ -3937,13 +3937,29 @@ body[data-slide-index="17"] .deck-footer-chrome {
 .pm-brief-proof-slide,
 .demo-proof-zoom-slide,
 .real-install-proof-slide {
-    padding: 12px 46px 12px !important;
+    padding: 8px 46px 8px !important;
+}
+
+.pm-brief-proof-slide .slide-title,
+.demo-proof-zoom-slide .slide-title {
+    font-size: 24px !important; /* Shrunk title to save space */
+}
+
+.pm-brief-proof-slide .slide-subtitle,
+.demo-proof-zoom-slide .slide-subtitle {
+    font-size: 13.5px !important; /* Shrunk subtitle to save space */
+    margin-bottom: 6px !important;
+}
+
+.pm-brief-proof-slide .proof-fullscreen-header,
+.demo-proof-zoom-slide .proof-fullscreen-header {
+    margin-bottom: 2px !important;
 }
 
 .pm-brief-proof-slide .proof-fullscreen-figure,
 .demo-proof-zoom-slide .proof-fullscreen-figure {
     width: auto;
-    height: 540px; /* Maximized height to span almost full slide height */
+    height: 580px; /* Maximized to 580px */
     max-width: 100%;
     margin-inline: auto;
 }
@@ -3952,14 +3968,14 @@ body[data-slide-index="17"] .deck-footer-chrome {
 .demo-proof-zoom-slide .slide-container {
     justify-content: flex-start;
     min-height: auto;
-    padding-top: 2px;
+    padding-top: 0;
 }
 
 .real-install-proof-slide .slide-container {
     max-width: 1280px;
     justify-content: flex-start;
     min-height: auto;
-    padding-top: 2px;
+    padding-top: 0;
 }
 
 .real-install-proof-grid {
@@ -3973,7 +3989,7 @@ body[data-slide-index="17"] .deck-footer-chrome {
 .real-install-proof-card.proof-fullscreen-figure {
     position: relative;
     width: 100%;
-    height: 480px; /* Maximized height for 3 side-by-side images */
+    height: 510px; /* Maximized to 510px */
     margin: 0;
     border-color: rgba(5, 0, 126, 0.16);
     background: linear-gradient(180deg, #f9fbff 0%, #edf5ff 100%);
