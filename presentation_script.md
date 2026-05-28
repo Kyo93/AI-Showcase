@@ -235,9 +235,7 @@ Mình giới thiệu 3 bộ skill phổ biến hiện tại. Thực ra skill nó
 * **Nội dung trên slide:** 3 ảnh thực tế sau khi boot USB vào máy: WinPE deploy, payload ready và post-install app.
 * **Thời gian ước tính:** 2 phút.
 * **Kịch bản nói:**
-  > "Đây là đoạn nối từ app build ra artifact vận hành thật. Ba ảnh này mình để chung một slide vì chúng kể cùng một chuỗi, không phải ba ý rời nhau.
-  >
-  > Ảnh đầu tiên là máy boot vào WinPE và chạy Ocean Offline Deploy. Script nhận diện USB, model máy, ổ target, driver pack và bắt đầu deploy Windows.
+  > "Sau khi build xong USB, mình test thật trên máy. Đây là ảnh chụp từ quá trình thật trên một laptop. Ảnh đầu tiên là quá trình boot vào WinPE và chạy Ocean Offline Deploy. Script nhận diện USB, model máy, ổ target, driver pack và bắt đầu deploy Windows.
   >
   > Ảnh thứ hai là payload đã copy local và USB có thể rút ra để dùng cho máy tiếp theo. Đây là checkpoint cho thấy phần deploy offline đã có điểm dừng rõ, không phải chạy mù.
   >

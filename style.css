@@ -97,7 +97,7 @@ body,
     justify-content: space-between;
     pointer-events: none;
     padding-bottom: 10px;
-    border-bottom: 1px solid rgba(0, 0, 84, 0.04);
+    border-bottom: 1px solid rgba(5, 0, 126, 0.08);
 }
 
 .deck-header-chrome .header-logo-container {
@@ -267,8 +267,8 @@ body,
     font-family: var(--font-mono) !important;
     font-size: 11px;
     font-weight: 700;
-    color: var(--soft) !important;
-    opacity: 0.28;
+    color: var(--muted) !important;
+    opacity: 0.65;
     letter-spacing: 0;
 }
 
@@ -283,15 +283,15 @@ body,
     justify-content: space-between;
     pointer-events: none;
     padding-top: 10px;
-    border-top: 1px solid rgba(0, 0, 84, 0.04);
+    border-top: 1px solid rgba(5, 0, 126, 0.08);
 }
 
 .deck-footer-chrome span {
     font-family: var(--font-mono) !important;
     font-size: 11px;
     font-weight: 700;
-    color: var(--soft) !important;
-    opacity: 0.28;
+    color: var(--muted) !important;
+    opacity: 0.65;
     letter-spacing: 0;
 }
 
