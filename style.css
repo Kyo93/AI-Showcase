@@ -3940,15 +3940,26 @@ body[data-slide-index="17"] .deck-footer-chrome {
     box-shadow: 0 20px 54px rgba(5, 0, 126, 0.14);
 }
 
-.pm-brief-proof-slide .proof-fullscreen-figure {
+.pm-brief-proof-slide .proof-fullscreen-figure,
+.demo-proof-zoom-slide .proof-fullscreen-figure {
     width: auto;
-    height: min(68vh, 760px);
+    height: 410px; /* Constrained height to fit 720px slides with header/footer */
     max-width: 100%;
     margin-inline: auto;
 }
 
+.pm-brief-proof-slide .slide-container,
+.demo-proof-zoom-slide .slide-container {
+    justify-content: flex-start;
+    min-height: auto;
+    padding-top: 10px;
+}
+
 .real-install-proof-slide .slide-container {
     max-width: 1280px;
+    justify-content: flex-start;
+    min-height: auto;
+    padding-top: 10px;
 }
 
 .real-install-proof-grid {
@@ -3962,7 +3973,7 @@ body[data-slide-index="17"] .deck-footer-chrome {
 .real-install-proof-card.proof-fullscreen-figure {
     position: relative;
     width: 100%;
-    aspect-ratio: 3 / 4;
+    height: 380px; /* Limit height of 3 side-by-side images */
     margin: 0;
     border-color: rgba(5, 0, 126, 0.16);
     background: linear-gradient(180deg, #f9fbff 0%, #edf5ff 100%);
