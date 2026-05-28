@@ -947,9 +947,19 @@ document.addEventListener('DOMContentLoaded', () => {
     const deckMotion = createDeckMotion();
     const voicePilotControls = createVoicePilotControls();
 
+    function updateFooterPageNumber(event) {
+        const currentNumEl = document.querySelector('.current-slide-num');
+        const totalNumEl = document.querySelector('.total-slides-num');
+        if (currentNumEl && totalNumEl && typeof Reveal !== 'undefined') {
+            currentNumEl.textContent = String((event.indexh || 0) + 1);
+            totalNumEl.textContent = String(Reveal.getSlides().length);
+        }
+    }
+
     if (typeof Reveal !== 'undefined') {
         Reveal.on('slidechanged', (event) => {
             document.body.dataset.slideIndex = String(event.indexh || 0);
+            updateFooterPageNumber(event);
             syncParticleActivity(event.currentSlide);
             coverMotion.handleSlide(event);
             deckMotion.handleSlide(event);
@@ -958,6 +968,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         Reveal.on('ready', (event) => {
             document.body.dataset.slideIndex = String(event.indexh || 0);
+            updateFooterPageNumber(event);
             syncParticleActivity(event.currentSlide);
             coverMotion.handleSlide(event);
             deckMotion.handleSlide(event);

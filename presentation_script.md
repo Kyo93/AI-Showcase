@@ -228,7 +228,7 @@ Mình giới thiệu 3 bộ skill phổ biến hiện tại. Thực ra skill nó
   >
   > Ảnh này là Ocean USB Builder trong lúc build USB. Mọi người có thể thấy ISO đầu vào, target USB, danh sách app, driver folder, build log và progress. Mình có thể hoàn toàn chỉ cần build 1 cái USB cài windows tự động cài app mà không cần build cái giao diện WPF như này. Tuy nhiên như vậy chỉ build 1 cái usb, muốn build nhiều USB và update mỗi khi có thay đổi OS, thay đổi driver hoặc app cần cài thì lại khá bất tiện. Nên mình quyết định build ra app này để ae trong team có thể tự custom usb cài windows theo nhu cầu, ví dụ như USB cài windows của team A cần thêm app X và app Y nhưng không cần app Z. Thì để team A tự build và quản lý USB của team mình để tránh phiền.
   >
-  > Lưu ý phần guardrail vẫn còn nguyên: đây là tool có thể format USB, nên build thật chỉ chạy với USB test và có xác nhận rõ
+  > Đây là tool có thể xoá data format ổ cứng nên việc kiểm soát cái gì thực sự đang chạy là khá quan trọng nếu không nó sẽ xoá nhầm ổ delete giữ liệu là việc có thể xảy ra."
 
 ## Slide 15: Real install proof
 
