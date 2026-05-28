@@ -112,6 +112,8 @@ body,
     width: 110px;
     height: auto;
     opacity: 0.9;
+    position: relative;
+    z-index: 8; /* Center z-index so dots can pass behind (z-index: 4) and in front (z-index: 12) */
     transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1),
         opacity 0.4s ease,
         filter 0.4s ease;
@@ -138,36 +140,114 @@ body,
     pointer-events: none;
     margin-top: -3px;
     margin-left: -3px;
-    z-index: 11;
 }
 
 .blue-dot {
     background: #1492FD;
     box-shadow: 0 0 6px #1492FD, 0 0 10px #1492FD;
-    animation: orbit-blue 5s linear infinite;
+    animation: orbit3d 6s linear infinite;
+    animation-delay: 0s;
 }
 
 .orange-dot {
     background: #EE4D2D;
     box-shadow: 0 0 6px #EE4D2D, 0 0 10px #EE4D2D;
-    animation: orbit-orange 5s linear infinite;
+    animation: orbit3d 6s linear infinite;
+    animation-delay: -2s; /* 120 deg phase shift (6s / 3) */
 }
 
-@keyframes orbit-blue {
-    from {
-        transform: rotate(0deg) translateX(22px) rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg) translateX(22px) rotate(-360deg);
-    }
+.green-dot {
+    background: #00A54A;
+    box-shadow: 0 0 6px #00A54A, 0 0 10px #00A54A;
+    animation: orbit3d 6s linear infinite;
+    animation-delay: -4s; /* 240 deg phase shift (6s * 2 / 3) */
 }
 
-@keyframes orbit-orange {
-    from {
-        transform: rotate(180deg) translateX(22px) rotate(-180deg);
+@keyframes orbit3d {
+    0.0% {
+        transform: translate(30.91px, -8.28px) scale(0.925);
+        z-index: 12;
+        opacity: 0.675;
     }
-    to {
-        transform: rotate(540deg) translateX(22px) rotate(-540deg);
+    6.2% {
+        transform: translate(29.55px, -3.96px) scale(1.030);
+        z-index: 12;
+        opacity: 0.799;
+    }
+    12.5% {
+        transform: translate(23.69px, 0.97px) scale(1.119);
+        z-index: 12;
+        opacity: 0.905;
+    }
+    18.8% {
+        transform: translate(14.22px, 5.75px) scale(1.179);
+        z-index: 12;
+        opacity: 0.975;
+    }
+    25.0% {
+        transform: translate(2.59px, 9.66px) scale(1.200);
+        z-index: 12;
+        opacity: 1.000;
+    }
+    31.2% {
+        transform: translate(-9.44px, 12.09px) scale(1.179);
+        z-index: 12;
+        opacity: 0.975;
+    }
+    37.5% {
+        transform: translate(-20.03px, 12.69px) scale(1.119);
+        z-index: 12;
+        opacity: 0.905;
+    }
+    43.8% {
+        transform: translate(-27.57px, 11.35px) scale(1.030);
+        z-index: 12;
+        opacity: 0.799;
+    }
+    50.0% {
+        transform: translate(-30.91px, 8.28px) scale(0.925);
+        z-index: 12;
+        opacity: 0.675;
+    }
+    56.2% {
+        transform: translate(-29.55px, 3.96px) scale(0.820);
+        z-index: 4;
+        opacity: 0.551;
+    }
+    62.5% {
+        transform: translate(-23.69px, -0.97px) scale(0.731);
+        z-index: 4;
+        opacity: 0.445;
+    }
+    68.8% {
+        transform: translate(-14.22px, -5.75px) scale(0.671);
+        z-index: 4;
+        opacity: 0.375;
+    }
+    75.0% {
+        transform: translate(-2.59px, -9.66px) scale(0.650);
+        z-index: 4;
+        opacity: 0.350;
+    }
+    81.2% {
+        transform: translate(9.44px, -12.09px) scale(0.671);
+        z-index: 4;
+        opacity: 0.375;
+    }
+    87.5% {
+        transform: translate(20.03px, -12.69px) scale(0.731);
+        z-index: 4;
+        opacity: 0.445;
+    }
+    93.8% {
+        transform: translate(27.57px, -11.35px) scale(0.820);
+        z-index: 4;
+        opacity: 0.551;
+    }
+    100.0% {
+        transform: translate(30.91px, -8.28px) scale(0.925);
+        z-index: 4;
+        opacity: 0.675;
     }
 }
 
