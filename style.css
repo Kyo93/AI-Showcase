@@ -3959,7 +3959,7 @@ body[data-slide-index="17"] .deck-footer-chrome {
 .pm-brief-proof-slide .proof-fullscreen-figure,
 .demo-proof-zoom-slide .proof-fullscreen-figure {
     width: auto;
-    height: 620px; /* Highly maximized height to push close to top/bottom */
+    height: 650px; /* Maximum height to completely fill the slide */
     max-width: 100%;
     margin-inline: auto;
 }
@@ -3989,7 +3989,7 @@ body[data-slide-index="17"] .deck-footer-chrome {
 .real-install-proof-card.proof-fullscreen-figure {
     position: relative;
     width: 100%;
-    height: 540px; /* Highly maximized height to push close to top/bottom */
+    height: 560px; /* Maximum height for 3 side-by-side images */
     margin: 0;
     border-color: rgba(5, 0, 126, 0.16);
     background: linear-gradient(180deg, #f9fbff 0%, #edf5ff 100%);
