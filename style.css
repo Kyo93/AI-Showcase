@@ -100,23 +100,75 @@ body,
     border-bottom: 1px solid rgba(0, 0, 84, 0.04);
 }
 
+.deck-header-chrome .header-logo-container {
+    position: relative;
+    display: inline-block;
+    pointer-events: auto;
+    animation: logoFloat 4s ease-in-out infinite;
+}
+
 .deck-header-chrome .header-logo {
     display: block;
     width: 110px;
     height: auto;
     opacity: 0.9;
-    pointer-events: auto;
     transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1),
         opacity 0.4s ease,
         filter 0.4s ease;
-    animation: logoFloat 4s ease-in-out infinite;
 }
 
-.deck-header-chrome .header-logo:hover {
+.deck-header-chrome .header-logo-container:hover {
     animation-play-state: paused;
-    transform: scale(1.08) translateY(-2px);
+}
+
+.deck-header-chrome .header-logo-container:hover .header-logo {
+    transform: scale(1.04) translateY(-1px);
     opacity: 1;
-    filter: drop-shadow(0 4px 16px rgba(20, 146, 253, 0.35));
+    filter: drop-shadow(0 4px 16px rgba(20, 146, 253, 0.25));
+}
+
+/* Orbit Dots styling */
+.logo-orbit-dot {
+    position: absolute;
+    top: 50%;
+    left: 20px; /* Centered around the circular wave mark of Sea logo */
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    pointer-events: none;
+    margin-top: -3px;
+    margin-left: -3px;
+    z-index: 11;
+}
+
+.blue-dot {
+    background: #1492FD;
+    box-shadow: 0 0 6px #1492FD, 0 0 10px #1492FD;
+    animation: orbit-blue 5s linear infinite;
+}
+
+.orange-dot {
+    background: #EE4D2D;
+    box-shadow: 0 0 6px #EE4D2D, 0 0 10px #EE4D2D;
+    animation: orbit-orange 5s linear infinite;
+}
+
+@keyframes orbit-blue {
+    from {
+        transform: rotate(0deg) translateX(18px) rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg) translateX(18px) rotate(-360deg);
+    }
+}
+
+@keyframes orbit-orange {
+    from {
+        transform: rotate(180deg) translateX(18px) rotate(-180deg);
+    }
+    to {
+        transform: rotate(540deg) translateX(18px) rotate(-540deg);
+    }
 }
 
 @keyframes logoFloat {
