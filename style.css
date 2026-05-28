@@ -295,12 +295,6 @@ body,
 
 body[data-slide-index="0"] .deck-header-chrome,
 body[data-slide-index="0"] .deck-footer-chrome,
-body[data-slide-index="13"] .deck-header-chrome,
-body[data-slide-index="13"] .deck-footer-chrome,
-body[data-slide-index="14"] .deck-header-chrome,
-body[data-slide-index="14"] .deck-footer-chrome,
-body[data-slide-index="15"] .deck-header-chrome,
-body[data-slide-index="15"] .deck-footer-chrome,
 body[data-slide-index="17"] .deck-header-chrome,
 body[data-slide-index="17"] .deck-footer-chrome {
     display: none;
