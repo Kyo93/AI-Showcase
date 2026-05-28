@@ -951,8 +951,11 @@ document.addEventListener('DOMContentLoaded', () => {
         const currentNumEl = document.querySelector('.current-slide-num');
         const totalNumEl = document.querySelector('.total-slides-num');
         if (currentNumEl && totalNumEl && typeof Reveal !== 'undefined') {
-            currentNumEl.textContent = String((event.indexh || 0) + 1);
-            totalNumEl.textContent = String(Reveal.getSlides().length);
+            const allSlides = Reveal.getSlides();
+            const currentSlide = Reveal.getCurrentSlide();
+            const currentIndex = allSlides.indexOf(currentSlide);
+            currentNumEl.textContent = String(currentIndex !== -1 ? currentIndex + 1 : (event.indexh || 0) + 1);
+            totalNumEl.textContent = String(allSlides.length);
         }
     }
 
