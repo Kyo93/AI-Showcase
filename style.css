@@ -97,7 +97,6 @@ body,
     justify-content: space-between;
     pointer-events: none;
     padding-bottom: 10px;
-    border-bottom: 1px solid rgba(5, 0, 126, 0.08);
 }
 
 .deck-header-chrome .header-logo-container {
@@ -283,7 +282,6 @@ body,
     justify-content: space-between;
     pointer-events: none;
     padding-top: 10px;
-    border-top: 1px solid rgba(5, 0, 126, 0.08);
 }
 
 .deck-footer-chrome span {
